@@ -105,9 +105,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10, 2, 18, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  background: #7BE01E;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 .nav-shell {
@@ -123,7 +123,7 @@ a {
 .brand {
   font-family: "Metal Mania", sans-serif;
   font-size: 1.4rem;
-  color: var(--gold-400);
+  color: var(--magenta-400);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -143,19 +143,19 @@ a {
 .menu a {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #0b0b0b;
   transition: color 160ms ease;
 }
 
 .menu a:hover {
-  color: var(--accent-green);
+  color: var(--gold-500);
 }
 
 .menu-toggle {
   display: none;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text-main);
+  background: #0b0b0b;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: var(--gold-400);
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
   text-transform: uppercase;
@@ -179,17 +179,20 @@ a {
   color: var(--gold-400);
 }
 
-.hero-logo {\n  width: min(220px, 70%);\n  height: 140px;\n  margin: 0.4rem 0 0.8rem;\n  border-radius: 999px;\n  border: 2px dashed rgba(123, 224, 30, 0.6);\n  box-shadow: 0 0 26px rgba(123, 224, 30, 0.25);\n  background: radial-gradient(circle at 30% 20%, rgba(123, 224, 30, 0.25), transparent 55%), rgba(10, 0, 18, 0.45);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 0.8rem;\n  text-transform: uppercase;\n  letter-spacing: 3px;\n  color: var(--accent-green);\n}\n\n
-.lead {
-  font-size: 1.1rem;
-  margin-bottom: 1.6rem;
-  max-width: 520px;
+.hero-logo {
+  display: block;
+  width: min(300px, 75%);
+  height: auto;
+  margin: 0.6rem 0 1rem;
+  border-radius: 999px;
+  background: transparent;
 }
 
 .hero-info {
   display: grid;
   gap: 1rem;
   margin-bottom: 1.8rem;
+  width: min(520px, 100%);
 }
 
 .info-card {
@@ -229,26 +232,33 @@ a {
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 1px;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+  background: #0b0b0b;
+  color: var(--gold-400);
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, var(--gold-400), var(--gold-500));
-  color: #1b020f;
-  box-shadow: 0 10px 25px rgba(255, 138, 31, 0.3);
+  background: #0b0b0b;
+  color: var(--gold-400);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .btn.primary:hover {
   transform: translateY(-2px) scale(1.02);
+  background: var(--gold-400);
+  color: #120014;
 }
 
 .btn.ghost {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-main);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  color: var(--gold-400);
+  background: #0b0b0b;
 }
 
 .btn.ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--gold-400);
+  color: #120014;
 }
 
 .hero-art {
@@ -257,8 +267,7 @@ a {
 }
 
 .poster {
-  width: min(320px, 90%);
-  height: 420px;
+  width: min(260px, 80%);
   border-radius: var(--radius-lg);
   background:
     linear-gradient(140deg, rgba(255, 138, 31, 0.12), rgba(255, 255, 255, 0.05)),
@@ -266,13 +275,7 @@ a {
     linear-gradient(180deg, rgba(25, 0, 40, 0.9), rgba(10, 0, 20, 1));
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow-hard);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1.2rem;
-  gap: 0.6rem;
+  padding: 0.5rem;
 }
 
 .poster-label {
@@ -354,12 +357,13 @@ a {
   border-radius: var(--radius-md);
   padding: 1.2rem;
   text-align: center;
-  border: 1px solid rgba(123, 224, 30, 0.35);\n  box-shadow: 0 0 18px rgba(123, 224, 30, 0.12);\n}
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
 .date-card .date {
   display: block;
   font-size: 1.5rem;
-  color: var(--accent-green);
+  color: var(--gold-400);
   margin-bottom: 0.4rem;
 }
 
@@ -429,7 +433,14 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
-.logo-tile {\n  border: 1px solid rgba(123, 224, 30, 0.35);\n  border-radius: var(--radius-md);\n  padding: 1.4rem;\n  text-align: center;\n  color: var(--text-muted);\n  background: rgba(10, 0, 18, 0.6);\n  box-shadow: 0 0 16px rgba(123, 224, 30, 0.08);\n}\n
+.logo-tile {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  text-align: center;
+  color: var(--text-muted);
+  background: rgba(10, 0, 18, 0.6);
+}\n
 
 .footer {
   padding: 3rem 1.4rem 4rem;
@@ -477,8 +488,15 @@ a {
   }
 
   .menu-toggle {
-    display: inline-flex;
-  }
+  display: none;
+  background: #0b0b0b;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: var(--gold-400);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
 }
 
 @media (max-width: 600px) {
@@ -492,8 +510,40 @@ a {
   }
 
   .poster {
-    height: 340px;
-  }
+  width: min(260px, 80%);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(140deg, rgba(255, 138, 31, 0.12), rgba(255, 255, 255, 0.05)),
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.2), transparent 45%),
+    linear-gradient(180deg, rgba(25, 0, 40, 0.9), rgba(10, 0, 20, 1));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-hard);
+  padding: 0.5rem;
 }
-\n.footer a {\n  color: var(--accent-green);\n  font-weight: 600;\n}\n\n.footer a:hover {\n  color: var(--gold-400);\n}\n
-\n.hero-logo {\n  display: block;\n  width: min(260px, 80%);\n  height: auto;\n  margin: 0.4rem 0 0.8rem;\n  border-radius: 999px;\n  border: 2px solid rgba(123, 224, 30, 0.45);\n  box-shadow: 0 0 26px rgba(123, 224, 30, 0.28);\n  background: rgba(10, 0, 18, 0.35);\n  padding: 0.6rem;\n}\n\n.poster-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  border-radius: var(--radius-lg);\n}\n
+}
+
+.poster-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius-lg) - 6px);
+}
+
+.footer a {
+  color: var(--gold-400);
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: var(--gold-500);
+}
+\n.nav-logo {\n  width: 120px;\n  height: auto;\n  display: block;\n}\n\n.dj-note {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--gold-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}\n
+\n.hero-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n}\n\n.footer > div {\n  max-width: 720px;\n  margin: 0 auto;\n}\n\n.map-placeholder {\n  width: 100%;\n  min-height: 200px;\n  border-radius: var(--radius-md);\n  border: 1px dashed rgba(255, 255, 255, 0.25);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: var(--text-muted);\n  margin: 0.6rem 0 0.9rem;\n}\n
+
+
