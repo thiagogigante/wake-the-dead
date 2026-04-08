@@ -3,104 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Wake the Dead Festival — 15ª Edição</title>
+  <title>Wake the Dead Festival</title>
 
-  <meta name="theme-color" content="#2b0a3a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="src/styles/styles.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="storm">
+<body>
   <header class="site-header" id="topo">
-    <div class="nav-shell">
-      <a class="brand" href="#inicio" aria-label="The Wake the Dead Festival">Wake The Dead</a>
-      <nav class="nav" aria-label="Navegação principal">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-        <div class="menu" id="menu">
-          <a href="#destaques">Destaques</a>
-          <a href="#datas">Dias</a>
-          <a href="#programacao">Programação</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#local">Local</a>
-          <a href="#apoiadores">Apoiadores</a>
-          <a href="#realizacao">Realização</a>
-          <a href="#contato">Contato</a>
+    <div class="header-left">
+      <img class="logo-mini" src="src/assets/images/logo.png" alt="Wake the Dead Festival" />
+      <span class="header-dates">DIAS 14, 15, 16 e 17 de Maio</span>
+    </div>
+    <div class="header-right">
+      <div class="header-countdown" aria-live="polite">
+        <div class="countdown-unit">
+          <span id="countdown-months">00</span>
+          <small>MES</small>
         </div>
-      </nav>
+        <div class="countdown-unit">
+          <span id="countdown-days">00</span>
+          <small>DIAS</small>
+        </div>
+        <div class="countdown-unit">
+          <span id="countdown-hours">00</span>
+          <small>HRS</small>
+        </div>
+        <div class="countdown-unit">
+          <span id="countdown-minutes">00</span>
+          <small>MINS</small>
+        </div>
+        <div class="countdown-unit">
+          <span id="countdown-seconds">00</span>
+          <small>SEGS</small>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
+  <aside class="side-menu" id="side-menu" aria-hidden="true">
+    <div class="side-menu-inner">
+      <button class="menu-close" aria-label="Fechar menu">FECHAR ×</button>
+      <div class="menu-info">        <strong>EVENTO GRATUITO</strong>
+        <br>DE 14 A 17 DE MAIO DE 2026
+        <br>Rua (placeholder) - Centro - Magé - RJ</div>
+      <div class="menu-divider"></div>
+      <nav class="menu-links">
+        <a href="#lineup">LINE-UP</a>
+        <a href="#localizacao">LOCALIZAÇÃO</a>
+        <a href="#sobre">SOBRE O EVENTO</a>
+        <a href="#historia">HISTÓRIA</a>
+        <a href="#apoio">APOIO</a>
+        <a href="#realizacao">REALIZAÇÃO</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+      <div class="menu-divider"></div>
+      <div class="menu-social">
+        <a href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Spotify</a>
+      </div>
+    </div>
+  </aside>
+
   <main>
-    <section id="inicio" class="hero" data-reveal>
+    <section class="hero" id="inicio">
+      <video class="hero-video" autoplay muted loop playsinline poster="src/assets/images/poster.jpg">
+        <source src="src/assets/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">15ª edição</p>
-        <img class="hero-logo" src="src/assets/images/logo.png" alt="The Wake the Dead Festival" />
-<p class="lead">Onde a música desperta o mundo!</p>
+        <p class="hero-eyebrow">15º EDIÇÃO</p>
+        <img class="hero-logo" src="src/assets/images/logo.png" alt="Wake the Dead Festival" />
+        <p class="hero-tagline">ONDE A MÚSICA DESPERTA O MUNDO</p>
 
-        <div class="hero-info">
-          <div class="info-card">
-            <span class="info-label">Dias</span>
-            <strong>14, 15, 16 e 17 de maio</strong>
+        <div class="hero-panel">
+          <h2>EVENTO GRATUITO</h2>
+          <p>DE 14 A 17 DE MAIO DE 2026</p>
+          <div class="panel-grid">
+            <a href="#lineup" class="panel-button">LINE-UP</a>
+            <a href="#localizacao" class="panel-button">LOCALIZAÇÃO</a>
+            <a href="#sobre" class="panel-button">SOBRE O FESTIVAL</a>
+            <a href="#historia" class="panel-button">HISTÓRIA</a>
           </div>
-          <div class="info-card">
-            <span class="info-label">Entrada</span>
-            <strong>Gratuita - Evento aberto</strong>
-          </div>
-          <div class="info-card">
-            <span class="info-label">Local</span>
-            <strong>Rua Adam Blumer, Centro — Magé <br>(Próximo a Praça de São Pedro)</strong>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="#programacao">Ver programação</a>
-          <a class="btn ghost" href="#sobre">Conhecer o festival</a>
-        </div>
-      </div>
-
-      <div class="hero-art" aria-hidden="true">
-        <div class="poster">
-          <img class="poster-image" src="src/assets/images/poster.jpg" alt="Cartaz do festival" />
         </div>
       </div>
     </section>
 
-    <section id="datas" class="section highlight" data-reveal>
+    <section class="section" id="lineup">
       <div class="section-header">
-        <h2 class="section-title">Atrações principais</h2>
-        <p class="section-sub">Quatro dias de shows com entrada gratuita - Evento aberto.</p>
+        <h2>Line-up</h2>
+        <p>Line-up em ordem. Atualizaremos com as atrações oficiais.</p>
       </div>
-
-      <div class="dates-grid">
-        <div class="date-card">
-          <span class="date">14 MAI</span>
-          <p>Quinta-feira</p>
-        </div>
-        <div class="date-card">
-          <span class="date">15 MAI</span>
-          <p>Sexta-feira</p>
-        </div>
-        <div class="date-card">
-          <span class="date">16 MAI</span>
-          <p>Sábado</p>
-        </div>
-        <div class="date-card">
-          <span class="date">17 MAI</span>
-          <p>Domingo</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="programacao" class="section" data-reveal>
-      <div class="section-header">
-        <h2 class="section-title">Programação completa</h2>
-        <p class="section-sub">Line-up em ordem. Atualizaremos com as atrações oficiais.</p>
-      </div>
-
       <div class="schedule-grid">
         <article class="schedule-day">
-          <h3>Dia 14</h3>
+          <h3>DIA 14</h3>
           <ol>
             <li>Banda 1</li>
             <li>Banda 2</li>
@@ -110,7 +110,7 @@
           <p class="dj-note">DJ Tal (nos intervalos)</p>
         </article>
         <article class="schedule-day">
-          <h3>Dia 15</h3>
+          <h3>DIA 15</h3>
           <ol>
             <li>Banda 1</li>
             <li>Banda 2</li>
@@ -120,7 +120,7 @@
           <p class="dj-note">DJ Tal (nos intervalos)</p>
         </article>
         <article class="schedule-day">
-          <h3>Dia 16</h3>
+          <h3>DIA 16</h3>
           <ol>
             <li>Banda 1</li>
             <li>Banda 2</li>
@@ -130,7 +130,7 @@
           <p class="dj-note">DJ Tal (nos intervalos)</p>
         </article>
         <article class="schedule-day">
-          <h3>Dia 17</h3>
+          <h3>DIA 17</h3>
           <ol>
             <li>Banda 1</li>
             <li>Banda 2</li>
@@ -142,91 +142,178 @@
       </div>
     </section>
 
-    <section id="sobre" class="section about" data-reveal>
+    <section class="section" id="localizacao">
       <div class="section-header">
-        <h2 class="section-title">Sobre o festival</h2>
-        <p class="section-sub">Produtor, parcerias e a trajetória da cena.</p>
+        <h2>Localização</h2>
+        <p>Rua Adam Blumer - Centro - Magé - RJ
+          <br>(Esquina com a Praça Comendador Guilherme / Praça da Banca de Peixe) 
+        </p>
       </div>
+      <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d618.2905587700336!2d-43.03927394891069!3d-22.65935798185385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99a318942645b7%3A0x73c70659a21a276f!2sPra%C3%A7a%20Comendador%20Guilherme%20-%20Banca%20de%20Peixe!5e0!3m2!1spt-BR!2sbr!4v1775587404324!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 
-      <div class="about-grid">
-        <div class="about-card">
-          <h3>Produção</h3>
-          <p>O festival é idealizado e produzido pela equipe responsável por conectar a cena local com novas experiências sonoras.</p>
-        </div>
-        <div class="about-card">
-          <h3>Parcerias</h3>
-          <p>Parcerias culturais e coletivos independentes fortalecem o alcance e a diversidade da programação.</p>
-        </div>
-        <div class="about-card">
-          <h3>Histórico</h3>
-          <p>Há 15 edições, o festival desperta novos públicos e mantém viva a chama do rock autoral.</p>
-        </div>
+    <section class="section" id="sobre">
+      <div class="section-header">
+        <h2>Sobre o evento</h2>
+        <p>Uma celebração intensa do rock independente e da cultura underground.</p>
+      </div>
+      <div class="text-columns">
+        <p>Apresente a missão do festival, o impacto cultural e o cenário local. Esta área está pronta para receber o texto definitivo.</p>
+        <p>Inclua informações sobre produção, parcerias e o que torna o Wake the Dead único entre os festivais brasileiros.</p>
       </div>
     </section>
 
-    <section id="local" class="section highlight" data-reveal>
+    <section class="section history" id="historia">
       <div class="section-header">
-        <h2 class="section-title">Local</h2>
-        <p class="section-sub">Rua Adam Blumer, Centro — Magé (Próximo a Praça de São Pedro).</p>
+        <h2>História</h2>
+        <p>15 edições construindo uma comunidade apaixonada por música pesada.</p>
       </div>
 
-      <div class="location-card">
+      <div class="history-stack">
+        <article class="history-block">
+          <div class="history-media">Imagem</div>
+          <div class="history-text">
+            <h3>Alan - O Produtor</h3>
+            <p>Texto sobre Alan...</p>
+          </div>
+        </article>
+
+        <article class="history-block history-block--reverse">
+          <div class="history-text">
+            <h3>Grandes Parcerias</h3>
+            <p>Texto sobre parceiros...</p>
+          </div>
+          <div class="history-media">Imagem</div>
+        </article>
+
+                <article class="history-block history-block--full">
+          <div class="history-text">
+            <h3>Time-Line</h3>
+            <p>Wake the Dead chega à 15ª edição.</p>
+          </div>
+          <div class="timeline-carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" aria-label="Anterior">‹</button>
+            <div class="carousel-track" role="list">
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 1</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 2</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 3</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 4</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 5</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 6</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 7</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 8</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 9</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 10</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 11</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 12</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 13</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 14</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+              <div class="carousel-item" role="listitem">
+                <div class="edition-title">Edição 15</div>
+                <div class="edition-sub">TEXTO</div>
+              </div>
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Próximo">›</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="apoio">
+      <div class="section-header">
+        <h2>Apoio</h2>
+        <p>Espaço reservado para marcas e apoiadores.</p>
+      </div>
+      <div class="logo-grid logo-grid--plain">
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+      </div>
+    </section>
+
+    <section class="section" id="realizacao">
+      <div class="section-header">
+        <h2>Realização</h2>
+        <p>Instituições e produtores responsáveis.</p>
+      </div>
+      <div class="logo-grid logo-grid--plain">
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+        <div class="logo-placeholder">LOGO AQUI</div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="section-header">
+        <h2>Contato</h2>
+        <p>Fale com a produção e acompanhe as novidades.</p>
+      </div>
+      <div class="contact-grid">
         <div>
-          <h3>Como chegar</h3>\n          <div class="map-placeholder" aria-label="Mapa do Google (em breve)">Mapa do Google (em breve)</div>\n          <p>Fácil acesso pelo centro da cidade. Em breve disponibilizaremos mapa e rotas detalhadas.</p>
+          <h3>Email</h3>
+          <p>contato@wakethedead.com.br</p>
         </div>
-        <div class="location-info">
-          <span>14 a 17 de maio</span>
-          <span>Entrada gratuita - Evento aberto</span>
-          <span>Área aberta ao público</span>
+        <div>
+          <h3>Instagram</h3>
+          <p>@wakethedeadfestival</p>
         </div>
-      </div>
-    </section>
-
-    <section id="apoiadores" class="section" data-reveal>
-      <div class="section-header">
-        <h2 class="section-title">Apoiadores</h2>
-        <p class="section-sub">Espaço reservado para marcas e parceiros.</p>
-      </div>
-
-      <div class="logo-grid">
-        <div class="logo-tile">Apoiador 1</div>
-        <div class="logo-tile">Apoiador 2</div>
-        <div class="logo-tile">Apoiador 3</div>
-        <div class="logo-tile">Apoiador 4</div>
-      </div>
-    </section>
-
-    <section id="realizacao" class="section highlight" data-reveal>
-      <div class="section-header">
-        <h2 class="section-title">Realização</h2>
-        <p class="section-sub">Instituições responsáveis pela edição.</p>
-      </div>
-
-      <div class="logo-grid">
-        <div class="logo-tile">Realização 1</div>
-        <div class="logo-tile">Realização 2</div>
-        <div class="logo-tile">Realização 3</div>
       </div>
     </section>
   </main>
 
-  <footer id="contato" class="footer">
-    <div>
-      <h2 class="section-title">Contato</h2>
-      <p>contato@wakethedead.com.br</p>
-      <p><a href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer">@wakethedeadfestival</a></p>
-      <p class="footer-note">15ª edição — onde a música desperta o mundo.</p>
-    </div>
+  <footer class="site-footer">
+    <p>Wake the Dead Festival — 15ª Edição</p> 
   </footer>
 
-  <!-- Contador de visitas (placeholder). Podemos ligar a um endpoint/analytics depois. -->
-  <script>
-    window.__visitCounterEndpoint = '';
-  </script>
-
-  <script type="module" src="src/scripts/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
 
 
 
