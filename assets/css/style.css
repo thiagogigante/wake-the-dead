@@ -903,3 +903,109 @@ img {
 .spotify-messages p.active {
   opacity: 1;
 }
+
+/* =========================================================
+   Balão Animado do Spotify (Estilo Cartoon/HQ)
+========================================================= */
+.spotify-balao {
+  position: fixed;
+  bottom: 95px; /* Fica logo acima da barra do Spotify */
+  right: 24px;
+  background: #ffffff; /* Fundo branco cartoon */
+  color: #000000; /* Texto preto para alto contraste */
+  padding: 16px 36px 16px 20px; /* Espaço extra na direita para o X não encostar no texto */
+  border: 4px solid #000000; /* Contorno grosso HQ */
+  border-radius: 16px 16px 0 16px; /* Formato de balão (ponta quadrada embaixo na direita) */
+  font-family: var(--ui-font);
+  font-size: 0.9rem;
+  font-weight: 800;
+  max-width: 250px;
+  text-align: right;
+  line-height: 1.4;
+  box-shadow: 6px 6px 0px #000000; /* Sombra dura offset (estilo gibi clássico) */
+  z-index: 40;
+  animation: flutuar 2.5s ease-in-out infinite; 
+}
+
+.spotify-balao p {
+  margin: 0;
+}
+
+/* O "rabinho" do balão - Contorno Preto (usando pseudo-elemento) */
+.spotify-balao::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: -4px; /* Alinhado com a borda direita */
+  border-width: 16px 20px 0 0;
+  border-style: solid;
+  border-color: #000000 transparent transparent transparent;
+}
+
+/* O "rabinho" do balão - Miolo Branco (sobrepõe o contorno preto) */
+.spotify-balao::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0px;
+  border-width: 11px 14px 0 0;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* =========================================================
+   Botão Fechar (X)
+========================================================= */
+.fechar-balao {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-family: var(--ui-font);
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: transform 150ms ease, color 150ms ease;
+}
+
+.fechar-balao:hover {
+  transform: scale(1.3) rotate(5deg); /* Dá um pulinho torto divertido no hover */
+  color: var(--gold-400); /* Muda pra cor de destaque pra mostrar que é clicável */
+}
+
+/* =========================================================
+   Animação e Responsividade
+========================================================= */
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 640px) {
+  .spotify-balao {
+    bottom: 90px;
+    right: 12px;
+    max-width: 210px;
+    font-size: 0.8rem;
+    padding: 14px 30px 14px 16px;
+    border-width: 3px; /* Borda um pouquinho mais fina no mobile */
+    box-shadow: 4px 4px 0px #000000;
+  }
+  
+  /* Ajuste do rabinho pro celular */
+  .spotify-balao::before {
+    bottom: -13px;
+    right: -3px;
+    border-width: 14px 16px 0 0;
+  }
+  
+  .spotify-balao::after {
+    bottom: -8px;
+    right: 0px;
+    border-width: 10px 12px 0 0;
+  }
+}
