@@ -20,8 +20,8 @@
   --max-width: 1180px;
   --radius-lg: 18px;
   --radius-md: 12px;
-  --shadow-soft: 0 30px 70px rgba(0, 0, 0, 0.45);
-  --shadow-hard: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-soft: 0 20px 70px rgba(0, 0, 0, 0.45);
+  --shadow-hard: 0 10px 50px rgba(0, 0, 0, 0.6);
   --overlay: rgba(10, 0, 18, 0.55);
   --transition: 200ms ease;
   --text: var(--text-main);
@@ -49,14 +49,14 @@ body {
     radial-gradient(circle at 20% 80%, rgba(48, 8, 80, 0.85) 0%, rgba(48, 8, 80, 0.6) 50%, transparent 78%),
     linear-gradient(160deg, #22043b 0%, #2a0647 45%, #32054f 100%); */
   color: var(--text);
-
   background: linear-gradient(
-  160deg,
-  #6a3079 0%,
-  #42113c 50%,
-  #821f8f 100%
-);
-
+    160deg,
+    #6a3079 0%,
+    #42113c 50%,
+    #821f8f 100%
+  );
+  overflow-x: hidden;
+  padding-bottom: 56px;
 }
 
 img {
@@ -77,7 +77,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  background: linear-gradient(160deg, #e47c1b, #ffbb00);
+  background: linear-gradient(160deg, #ff8a1f, #f9c332);
   z-index: 50;
 }
 
@@ -128,7 +128,7 @@ img {
 .menu-toggle {
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.555);
+  border: 1px solid var(--text);
   background: transparent;
   display: grid;
   gap: 5px;
@@ -140,13 +140,17 @@ img {
 .menu-toggle span {
   width: 100%;
   height: 2px;
-  background: #000000;
-  transition: var(--transition);
+  background: #1c0026;
+}
+ .menu-toggle:hover {
+  background: #2b0037dc;
+  border-color: var(--magenta-400);
 }
 
-.menu-toggle:hover {
-  background: rgba(249, 195, 50, 0.12);
-  border-color: rgba(249, 195, 50, 0.45);
+.menu-toggle:hover span {
+  width: 100%;
+  height: 2px;
+  background: #e47c1b;
 }
 
 /* =========================================================
@@ -159,7 +163,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 70px;
+  padding-top: 10px;
 }
 
 .hero-video {
@@ -189,7 +193,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 2px;
 }
 
 .hero-eyebrow {
@@ -217,7 +221,6 @@ img {
   background: rgba(10, 0, 18, 0.75);
   border: 1px solid rgba(38, 1, 46, 0.747);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-hard);
   max-width: 520px;
   width: min(520px, 90vw);
   display: grid;
@@ -254,7 +257,6 @@ img {
   letter-spacing: 1px;
   font-weight: 600;
   background: rgba(163, 29, 216, 0.6);
-  transition: var(--transition);
 }
 
 .panel-button:hover {
@@ -277,10 +279,8 @@ img {
   margin-bottom: 32px;
 }
 
-.section-header h2 {
+ .section-header h2 {
   margin: 0 0 12px;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-
   width: 100%;
   text-align: left;
   font-size: clamp(1.4rem, 3vw, 2.1rem);
@@ -289,15 +289,13 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   background: linear-gradient(160deg, #97f767, #2E6B0A);
-
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow( 0px 1.5px 0  #120014);
+  filter: drop-shadow(0px 1.5px 0 #120014);
   transition: color var(--transition), background var(--transition), transform var(--transition), filter var(--transition);
-
-
 }
+
 
 .section-header p {
   color: var(--muted);
@@ -337,7 +335,7 @@ img {
   font-size: 0.85rem;
 }
 
-.map-placeholder {\n  border: 1px dashed rgba(255, 255, 255, 0.2);\n  border-radius: 0;\n  min-height: 260px;\n  display: grid;\n  place-items: center;\n  color: var(--muted);\n}\n\n
+.map-placeholder {  border: 1px dashed rgba(255, 255, 255, 0.2);  border-radius: 0;  min-height: 260px;  display: grid;  place-items: center;  color: var(--muted);}
 
 .text-columns {
   display: grid;
@@ -394,7 +392,7 @@ img {
   right: 0;
   height: 100vh;
   width: min(460px, 88vw);
-  background: linear-gradient(160deg,  #e47c1b, #ecaf05/*#4F9E10, #2E6B0A */);
+  background: linear-gradient(160deg,  #e47c1b, #ecaf05);
   transform: translateX(100%);
   transition: transform 280ms ease;
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
@@ -436,7 +434,7 @@ img {
 
 .menu-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  background: #1200145e;
   width: 100%;
 }
 
@@ -444,14 +442,14 @@ img {
 .menu-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   align-items: flex-end;
   text-align: right;
 }
 
 .menu-social {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -469,7 +467,7 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow( 0px 1.5px 0  #120014);
+  filter: drop-shadow( 0px 1.5px 0  #1200149a);
   transition: color var(--transition), background var(--transition), transform var(--transition), filter var(--transition);
 }
   /*
@@ -490,29 +488,47 @@ img {
 */
 .menu-links a:hover {
   color: #7BE01E;
-  background: linear-gradient(70deg, #9f19b1, #dd0fcc);
-  /*background: linear-gradient(70deg, #7BE01E, #2f5809);*/
-  filter: drop-shadow(0px 1.8px 0  #120014);
+  -webkit-text-fill-color: #7BE01E;
+  background: linear-gradient(70deg, #1c0026, #3c0a56 );
+/*  background: linear-gradient(70deg, #FF2FB3, #CC1F8A); */
+
+  filter: drop-shadow(0px 1.8px 0  #1200149a);
   transform: translateX(2px);
 }
 
-.menu-social a {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 80%;
   display: grid;
   place-items: center;
-  background: rgba(0, 0, 0, 0.35);
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 0.65rem;
+  background: #7BE01E;
+  color: #120014;
   text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px #1200149a;
+}
+
+.social-link svg {
+  width: 30;
+  height: 30;
+  fill: currentColor;
+}
+
 
 /* =========================================================
    Responsive
 ========================================================= */
 @media (max-width: 900px) {
+  .header-dates {
+    display: none;
+  }
   .header-countdown {
     gap: 8px;
   }
@@ -533,7 +549,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  background: linear-gradient(160deg, #4F9E10, #2E6B0A);
+  background: linear-gradient(160deg, #ff8a1f, #f9c332);
   z-index: 50;
 }
 
@@ -565,6 +581,9 @@ img {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
 }
 
 .section.revealed {
@@ -572,9 +591,30 @@ img {
   transform: translateY(0);
 }
 
-\n#contato {\n  background: linear-gradient(160deg, #4F9E10, #2E6B0A);\n  border-radius: var(--radius-lg);\n  max-width: none;\n  width: 100%;\n  margin: 0;\n}\n\n
-\n#contato .section-header,\n#contato .contact-grid {\n  max-width: var(--max-width);\n  margin-left: auto;\n  margin-right: auto;\n}\n
-\n.map-embed {\n  width: 100%;\n  max-width: 100%;\n  height: 360px;\n  border: 0;\n  border-radius: 0;\n  display: block;\n}\n\n\n
+#contato {
+  background: transparent;
+  border-radius: 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+#contato .section-header,
+#contato .contact-grid {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.map-embed {
+  width: 100%;
+  max-width: 100%;
+  height: 360px;
+  border: 0;
+  border-radius: 0;
+  display: block;
+}
 
 #localizacao iframe,
 .map-embed {
@@ -584,21 +624,6 @@ img {
   border-radius: 0;
   display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .logo-grid--plain {
   display: grid;
@@ -620,12 +645,18 @@ img {
   object-fit: contain;
   display: block;
 }
-.history-stack {
+
+/* =========================================================
+   Layouts em Grade (Mobile e Desktop) - Sobre e História
+========================================================= */
+
+/* Garante que o gap funcione no mobile para as duas seções */
+.history-stack, .sobre-stack {
   display: grid;
   gap: 20px;
 }
 
-.history-block {
+.history-block, .sobre-block {
   background: var(--surface);
   border-radius: var(--radius-md);
   padding: 20px;
@@ -636,15 +667,16 @@ img {
   box-shadow: var(--shadow-hard);
 }
 
-.history-block--reverse {
+/* ERRO CORRIGIDO: A vírgula sobrando no final foi removida */
+.history-block--reverse, .sobre-block--reverse {
   grid-template-columns: 1fr minmax(180px, 260px);
 }
 
-.history-block--full {
+.history-block--full, .sobre-block--full {
   grid-template-columns: 1fr;
 }
 
-.history-media {
+.history-media, .sobre-media {
   width: 100%;
   min-height: 160px;
   background: rgba(255, 255, 255, 0.15);
@@ -656,12 +688,36 @@ img {
   letter-spacing: 1px;
 }
 
-.history-text h3 {
+.history-text, .sobre-text {
+  margin: 0 0 8px;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.history-text h3, .sobre-text h3 {
   margin: 0 0 8px;
   color: var(--gold-400);
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
+
+/* =========================================================
+   Versão Desktop (Telas Maiores)
+========================================================= */
+@media (min-width: 900px) {
+  /* Sobre com 2 colunas */
+  .sobre-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Força os blocos internos a empilharem (imagem em cima, texto embaixo)
+     para caber certinho nas colunas lado a lado no desktop */
+  .history-block, .sobre-block,
+  .history-block--reverse, .sobre-block--reverse,
+  .history-block--full, .sobre-block--full {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
 .timeline-carousel {
   position: relative;
@@ -760,3 +816,90 @@ img {
 
 
 
+
+
+@media (max-width: 640px) {
+  .header-countdown {
+    gap: 8px;
+  }
+  .countdown-unit span {
+    font-size: 0.8rem;
+  }
+  .countdown-unit small {
+    font-size: 0.5rem;
+  }
+}
+
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.contact-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* =========================================================
+   Spotify Bar (rodape fixo)
+========================================================= */
+.spotify-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  overflow: hidden;
+}
+
+.spotify-label {
+  color: #120014; /* ou branco, como preferir */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.spotify-bar iframe {
+  width: calc(100% + 20px);
+  height: 100%;
+  margin-left: -10px;
+  border-radius: 0 !important;
+  border: 0;
+  align-items: center;
+
+}
+
+.spotify-messages {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.spotify-messages p {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  margin: 0;
+}
+
+.spotify-messages p.active {
+  opacity: 1;
+}

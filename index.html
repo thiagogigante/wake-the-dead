@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Festival Wake the Dead - 4 dias de rock em Magé RJ, evento gratuito. Confira line-up, localização e mais.">
+  <meta name="keywords" content="festival rock mage, wake the dead, evento gratuito rj">
+  <meta property="og:title" content="Wake the Dead Festival">
+  <meta property="og:description" content="4 dias de rock, evento gratuito em Magé">
+  <meta property="og:image" content="assets/images/logo.png">
+
   <title>Wake the Dead Festival</title>
 
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -10,7 +17,7 @@
 <body>
   <header class="site-header" id="topo">
     <div class="header-left">
-      <img class="logo-mini" src="src/assets/images/logo.png" alt="Wake the Dead Festival" />
+      <img class="logo-mini" src="assets/images/logo.png" alt="Wake the Dead Festival" />
       <span class="header-dates">DIAS 14, 15, 16 e 17 de Maio</span>
     </div>
     <div class="header-right">
@@ -44,13 +51,29 @@
     </div>
   </header>
 
+  <!-- Spotify Bar (fixa no rodape) -->
+  <!-- Spotify Bar (fixa no rodape) -->
+<div class="spotify-bar" aria-label="Player do Spotify">
+  
+  <iframe
+    data-testid="embed-iframe"
+    src="https://open.spotify.com/embed/playlist/4lkXEsxhKOrwbWh5jv9HAj?utm_source=generator"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    title="Spotify"
+  ></iframe>
+  
+
+  
+</div>
+
+
   <aside class="side-menu" id="side-menu" aria-hidden="true">
     <div class="side-menu-inner">
-      <button class="menu-close" aria-label="Fechar menu">FECHAR ×</button>
-      <div class="menu-info">        <strong>EVENTO GRATUITO</strong>
-        <br>DE 14 A 17 DE MAIO DE 2026
-        <br>Rua (placeholder) - Centro - Magé - RJ</div>
-      <div class="menu-divider"></div>
+      <button class="menu-close" aria-label="Fechar menu">FECHAR X</button>
+      <div class="menu-info">
+        <strong><h1>EVENTO GRATUITO</h1></strong></div>
+        <div class="menu-divider"></div>
       <nav class="menu-links">
         <a href="#lineup">LINE-UP</a>
         <a href="#localizacao">LOCALIZAÇÃO</a>
@@ -61,23 +84,44 @@
         <a href="#contato">CONTATO</a>
       </nav>
       <div class="menu-divider"></div>
-      <div class="menu-social">
-        <a href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">Spotify</a>
+                  <div class="menu-social">
+        <a class="social-link" href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path>
+          </svg>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path>
+          </svg>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path>
+          </svg>
+          <span class="sr-only">Spotify</span>
+          <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"/>
+  </svg>
+  <span class="sr-only">YouTube</span>
+</a>
+        </a>
       </div>
     </div>
   </aside>
 
   <main>
     <section class="hero" id="inicio">
-      <video class="hero-video" autoplay muted loop playsinline poster="src/assets/images/poster.jpg">
-        <source src="src/assets/videos/hero.mp4" type="video/mp4" />
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/videos/hero.mp4">
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="hero-eyebrow">15º EDIÇÃO</p>
-        <img class="hero-logo" src="src/assets/images/logo.png" alt="Wake the Dead Festival" />
+        <img class="hero-logo" src="assets/images/logo.png" alt="Wake the Dead Festival" />
         <p class="hero-tagline">ONDE A MÚSICA DESPERTA O MUNDO</p>
 
         <div class="hero-panel">
@@ -96,7 +140,7 @@
     <section class="section" id="lineup">
       <div class="section-header">
         <h2>Line-up</h2>
-        <p>Line-up em ordem. Atualizaremos com as atrações oficiais.</p>
+        <p>Atualizar com a ordem das bandas.</p>
       </div>
       <div class="schedule-grid">
         <article class="schedule-day">
@@ -154,17 +198,44 @@
 
     <section class="section" id="sobre">
       <div class="section-header">
-        <h2>Sobre o evento</h2>
-        <p>Uma celebração intensa do rock independente e da cultura underground.</p>
+        <h2>Sobre o Festival</h2>
+        <p>Apresentar Missão, Visão, Valores.</p>
       </div>
-      <div class="text-columns">
-        <p>Apresente a missão do festival, o impacto cultural e o cenário local. Esta área está pronta para receber o texto definitivo.</p>
-        <p>Inclua informações sobre produção, parcerias e o que torna o Wake the Dead único entre os festivais brasileiros.</p>
-      </div>
-    </section>
+
+      <div class="sobre-stack">
+        <article class="sobre-block">
+          <div class="sobre-text">
+            <h3>Missão e Cenário</h3>
+            <p>
+              O Wake the Dead nasce com o propósito de fortalecer a cena do rock independente,
+              valorizando bandas locais e criando um espaço acessível para cultura em Magé.
+            </p>
+            <p>
+              Mais do que shows, o festival constrói um ponto de encontro para artistas,
+              público e a comunidade underground.
+            </p>
+          </div>
+          <div class="sobre-media">Imagem</div>
+        </article>
+
+        <article class="sobre-block sobre-block--reverse">
+          <div class="sobre-media">Imagem</div>
+          <div class="sobre-text">
+            <h3>Causas Sociais e Ambientais</h3>
+            <p>
+              O evento também atua com campanhas solidárias e incentiva a conscientização ambiental,
+              promovendo ações de impacto positivo na comunidade.
+            </p>
+            <p>
+              A ideia é unir música e responsabilidade social em uma experiência que vai além do palco.
+            </p>
+          </div>
+        </article>
+      </div> </section>
 
     <section class="section history" id="historia">
       <div class="section-header">
+        
         <h2>História</h2>
         <p>15 edições construindo uma comunidade apaixonada por música pesada.</p>
       </div>
@@ -173,15 +244,19 @@
         <article class="history-block">
           <div class="history-media">Imagem</div>
           <div class="history-text">
-            <h3>Alan - O Produtor</h3>
-            <p>Texto sobre Alan...</p>
+            <h3>Allan Aguiar - O Produtor</h3>
+            <p>
+              Release sobre Allan...
+            </p>
           </div>
         </article>
 
         <article class="history-block history-block--reverse">
           <div class="history-text">
             <h3>Grandes Parcerias</h3>
-            <p>Texto sobre parceiros...</p>
+            <p>
+              Texto sobre parceiros...
+            </p>
           </div>
           <div class="history-media">Imagem</div>
         </article>
@@ -189,8 +264,11 @@
                 <article class="history-block history-block--full">
           <div class="history-text">
             <h3>Time-Line</h3>
-            <p>Wake the Dead chega à 15ª edição.</p>
+            <p>
+              Linha do tempo dos Flyers das edições anteriores.
+            </p>
           </div>
+
           <div class="timeline-carousel" data-carousel>
             <button class="carousel-btn prev" type="button" aria-label="Anterior">‹</button>
             <div class="carousel-track" role="list">
@@ -287,7 +365,7 @@
       </div>
     </section>
 
-    <section class="section" id="contato">
+        <section class="section" id="contato">
       <div class="section-header">
         <h2>Contato</h2>
         <p>Fale com a produção e acompanhe as novidades.</p>
@@ -302,6 +380,32 @@
           <p>@wakethedeadfestival</p>
         </div>
       </div>
+      <div class="contact-social">
+        <a class="social-link" href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path>
+          </svg>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path>
+          </svg>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a class="social-link" href="#" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path>
+          </svg>
+          <span class="sr-only">Spotify</span>
+        </a>
+        <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"/>
+          </svg>
+          <span class="sr-only">YouTube</span>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -312,11 +416,5 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
 
 
