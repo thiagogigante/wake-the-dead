@@ -236,3 +236,46 @@
   initSpotifyMessages();
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Encontra o balão e o botão de fechar
+  const balaoSpotify = document.getElementById('balao-spotify');
+  const btnFecharBalao = document.getElementById('fechar-balao');
+
+  // Se os dois existirem na página, ativa o clique
+  if (balaoSpotify && btnFecharBalao) {
+    btnFecharBalao.addEventListener('click', () => {
+      // Esconde o balão mudando o display dele para 'none'
+      balaoSpotify.style.display = 'none';
+    });
+  }
+});
+
+const form = document.querySelector('.contact-form');
+const status = document.querySelector('.form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "Mensagem enviada com sucesso!";
+      form.reset();
+    } else {
+      status.innerHTML = "Erro ao enviar. Tenta novamente.";
+    }
+
+  } catch (error) {
+    status.innerHTML = "Erro de conexão.";
+  }
+});

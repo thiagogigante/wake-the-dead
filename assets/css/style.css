@@ -380,7 +380,7 @@ img {
 .site-footer {
   padding: 40px 24px;
   text-align: center;
-  background: #120014;
+  background: #0B0213;
 }
 
 /* =========================================================
@@ -500,7 +500,7 @@ img {
 .social-link {
   width: 50px;
   height: 50px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 80%;
   display: grid;
   place-items: center;
@@ -808,14 +808,12 @@ img {
 }
 
 .edition-sub {
+  text-align: center;
   font-size: 0.8rem;
   color: var(--text-muted);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
-
-
 
 
 @media (max-width: 640px) {
@@ -962,7 +960,7 @@ img {
   right: 8px;
   background: transparent;
   border: none;
-  color: #000000;
+  color: #e00eac;
   font-family: var(--ui-font);
   font-size: 1.1rem;
   font-weight: 900;
@@ -1009,3 +1007,58 @@ img {
     border-width: 10px 12px 0 0;
   }
 }
+
+.contact-form {
+  max-width: 700px;
+}
+
+/* linha com 3 campos */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* campos padrão */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  background: #dddddd;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* mensagem ocupa tudo */
+.contact-form textarea {
+  margin-top: 15px;
+  height: 100px;
+}
+
+/* linha botão + status */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* botão pequeno */
+.contact-form button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* status */
+.form-status {
+  font-size: 14px;
+  color: #ff2a6d;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
