@@ -344,12 +344,11 @@ img {
   color: var(--muted);
 }
 
-
 .img-bandas {
   width: auto;
-  height: 90hl;
   margin-top: 12px;
 }
+
 
 .schedule-grid {
   display: grid;
@@ -357,7 +356,7 @@ img {
   gap: 18px;
 }
 
-.schedule-day {
+.schedule-day {;
   background: var(--surface);
   border-radius: var(--radius-md);
   padding: 18px 20px;
@@ -371,11 +370,25 @@ img {
   letter-spacing: 1px;
 }
 
-.schedule-day ol {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--text);
+
+
+/* *********************************** MOVER LOGO DAS BANDAS *************************************** */
+.schedule-day img:hover {
+  transform: translateX(8px) rotate(-2deg) scale(1.1);
+  color: var(--gold-400);
 }
+
+.schedule-day img::after {
+  position: absolute;
+  right: -8px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+
+
+
+
 
 .dj-note {
   margin-top: 10px;
@@ -716,7 +729,8 @@ img {
 }
 
 .history-media, .sobre-media {
-  width: 100%;
+  width: auto;
+  height: 90px;
   min-height: 160px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
