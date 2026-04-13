@@ -52,7 +52,7 @@ body {
     #821f8f 100%
   );
   overflow-x: hidden;
-  padding-bottom: 56px;
+  /*padding-bottom: 56px;/* espaço para o spotify bar fixo */
 }
 
 img {
@@ -176,19 +176,21 @@ img {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 70px);
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* força full width mesmo dentro de container */
 }
 
 .hero-video {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   opacity: 60%;
   filter: saturate(1.2);
   z-index: 0;
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0, 0, 0, 0.2) 85%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0, 0, 0, 0.2) 85%, transparent 100%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-overlay {
@@ -342,6 +344,13 @@ img {
   color: var(--muted);
 }
 
+
+.img-bandas {
+  width: auto;
+  height: 90hl;
+  margin-top: 12px;
+}
+
 .schedule-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -474,17 +483,6 @@ img {
   color: var(--gold-400); /* Muda pra cor de destaque pra mostrar que é clicável */
 }
 
-
-.menu-info {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  color: var(--gold-400);
-  line-height: 1.2;
-  font-family: var(--ui-font);
-  font-weight: 800;
-  text-align: right;
-}
-
 .menu-divider {
   height: 1px;
   background: #1200145e;
@@ -508,12 +506,12 @@ img {
 }
 
 .menu-links a {
-  width: 100%;
-  display: block;
+  width: AUTO%;
+  display: inline-block;
   text-align: right;
   font-size: clamp(2rem, 3vw, 2rem);
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
   background: linear-gradient(10deg, #9f19b1, #dd0fcc);
