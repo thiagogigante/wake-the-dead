@@ -316,6 +316,9 @@ img {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
 }
 
 .section-header {
@@ -446,6 +449,23 @@ img {
   background: #0B0213;
 }
 
+#follow {
+  display: inline-flex;
+  align-items: center;
+  color: #ff2d95; /* rosa */
+  font-weight: bold;
+  gap: 8px;
+}
+
+#follow::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 10px solid #ff2d95; /* seta pra esquerda */
+}
+
 /* =========================================================
    Side Menu
 ========================================================= */
@@ -519,7 +539,6 @@ img {
 }
 
 .menu-links a {
-  width: AUTO%;
   display: inline-block;
   text-align: right;
   font-size: clamp(2rem, 3vw, 2rem);
@@ -568,8 +587,8 @@ img {
 }
 
 .social-link svg {
-  width: 30;
-  height: 30;
+  width: 30px;
+  height: 30px;
   fill: currentColor;
 }
 
@@ -628,15 +647,7 @@ img {
 /* =========================================================
    Scroll Reveal
 ========================================================= */
-.section {
-  padding: 90px 24px;
-  max-width: var(--max-width);
-  width: 100%;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
-}
+
 
 .section.revealed {
   opacity: 1;
