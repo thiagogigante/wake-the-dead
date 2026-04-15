@@ -214,7 +214,7 @@ img {
 }
 
 .hero-logo {
-  width: min(200px, 100vw);
+  width: min(350px, 100vw);
 }
 
 .hero-tagline {
@@ -290,7 +290,7 @@ img {
 ========================================================= */
 .section {
   position: relative;
-  padding: 90px 24px;
+  padding: 30px 24px;
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
@@ -320,32 +320,46 @@ img {
 }
 
 /* Theme variants */
-.theme-tone-main {
+.theme-main {
   --section-bg: linear-gradient(140deg, #6a3079 0%, #42113c 50%, #821f8f 100%);
 }
 
-.theme-tone-green {
+.theme-green {
   --section-bg: linear-gradient(145deg, rgba(123, 224, 30, 0.15), rgba(29, 155, 17, 0.82));
   --section-overlay: linear-gradient(0deg, rgba(123, 245, 23, 0.829), rgb(14, 105, 11));
 }
 
-.theme-bg-guitar {
-  --section-bg: linear-gradient(120deg, rgba(43, 0, 55, 0.86), rgba(18, 0, 20, 0.68)),
+.theme-pink {
+  --section-bg: linear-gradient(145deg, rgba(224, 30, 192, 0.15), rgba(155, 17, 109, 0.82));
+  --section-overlay: linear-gradient(0deg, rgba(245, 23, 171, 0.829), rgb(105, 11, 77));
+}
+
+.theme-gold { 
+  --section-bg: linear-gradient(120deg,  #f9c332,  #ff8a1f),
     url("../images/bg/486846568_1108373194668212_1586563502512425687_n.jpg") center / cover no-repeat;
-  --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
+  --section-overlay: linear-gradient(0deg, #ff8a1f, #f9c332);
 }
 
 .theme-bg-noise {
-  --section-bg: linear-gradient(120deg, rgba(60, 10, 86, 0.84), rgba(18, 0, 20, 0.65)),
+  --section-bg: linear-gradient(10deg, rgba(131, 25, 189, 0.84), rgba(4, 0, 10, 0.863)),
     url("../images/bg6.avif") center / cover no-repeat;
   --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14));
 }
 
-.theme-pattern-skull {
-  --section-bg: linear-gradient(120deg, rgba(28, 0, 38, 0.92), rgba(18, 0, 20, 0.82)),
+.theme-skull {
+  --section-bg: linear-gradient(120deg,  rgba(49, 9, 75, 0.87), rgba(0, 0, 0, 0.562)),
     url("../images/pattern-skullstyle.jpg") center / 360px repeat;
-  --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.24));
+  --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0));
 }
+
+.theme-tour {
+     --section-bg: linear-gradient(145deg, rgba(123, 224, 30, 0.15), rgba(29, 155, 17, 0.82));
+  --section-overlay: linear-gradient(0deg, rgba(100, 150, 63, 0.829), rgb(255, 255, 255));
+
+  /* --section-bg: 
+    url("../images/wut/capa wut.png") center / 100% no-repeat; */
+}
+
 
 .section-header {
   margin-bottom: 32px;
@@ -389,7 +403,7 @@ img {
 
 @media (min-width: 900px) {
   .impact-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -415,8 +429,8 @@ img {
   line-height: 1.35;
 }
 
-#impacto .impact-card {
-  background: linear-gradient(140deg, rgba(10, 44, 26, 0.86), rgba(8, 30, 19, 0.82));
+.impact-card {
+  background: linear-gradient(0deg, rgba(42, 245, 23, 0.829), rgb(30, 105, 11));
   border-color: rgba(123, 224, 30, 0.36);
 }
 
@@ -457,8 +471,20 @@ img {
 }
 
 /* =========================================================
-   Tour / Access / Vagas
+   Tour / Access / voluntario
 ========================================================= */
+.banner-tour img{
+  border-radius: var(--radius-md);
+}
+.access-grid {
+}
+.access-card{
+   background: linear-gradient(0deg, rgba(245, 23, 171, 0.829), rgb(105, 11, 77));
+   box-shadow: var(--shadow-hard);
+   padding: 20px;
+
+}
+
 .tour-grid,
 .access-grid {
   display: grid;
@@ -466,14 +492,15 @@ img {
   gap: 18px;
 }
 
-.tour-card,
 .access-card,
-.vagas-card {
-  background: var(--surface);
+.voluntario-card {
   border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: var(--shadow-hard);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px; 
+  border: 1px solid rgba(245, 23, 171, 0.829);
+}
+
+.access-card{
+   box-shadow: var(--shadow-hard);
 }
 
 .tour-card h3,
@@ -485,18 +512,18 @@ img {
 
 .tour-card p,
 .access-card p,
-.vagas-card p {
+.voluntario-card p {
   margin: 0;
   color: var(--text);
   line-height: 1.45;
 }
 
-.vagas-card {
+.voluntario-card {
   display: grid;
   gap: 14px;
 }
 
-.vagas-button {
+.voluntario-button {
   justify-self: start;
 }
 
@@ -681,6 +708,7 @@ img {
   .sobre-block--pilar3 {
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
+    padding-bottom: clamp(100px, 25vw, 300px);
   }
 }
 
@@ -714,23 +742,14 @@ img {
   line-height: 1.5;
 }
 
-/* Duo: imagem + vídeo lado a lado dentro do .sobre-media do pilar 3 */
 .sobre-media-duo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 7fr 3fr;
   gap: 10px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  align-items: start; /* Alinha os itens ao topo, para que a imagem dite a altura */
+  height: 300px;
 }
 
-.sobre-media-duo__img {
-  width: 100%;
-  height: auto; /* Permite que a altura se ajuste para manter a proporção */
-  border-radius: var(--radius-md);
-  display: block;
-}
-
+.sobre-media-duo__img,
 .sobre-media-duo__video {
   width: 100%;
   height: 100%;
@@ -739,11 +758,20 @@ img {
   display: block;
 }
 
-/* Mobile: empilha imagem em cima, vídeo embaixo */
 @media (max-width: 600px) {
   .sobre-media-duo {
     grid-template-columns: 1fr;
+    height: auto;
   }
+
+  .sobre-media-duo__img,
+  .sobre-media-duo__video {
+    height: 240px;
+  }
+}
+
+.sobre-block--pilar3 {
+  overflow: visible;
 }
 
 /* =========================================================
@@ -884,14 +912,13 @@ img {
 .logo-grid--plain {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
+  gap: 10px;
   align-items: center;
 }
 
 .logo-placeholder {
   width: 100%;
   min-height: 80px;
-  border: 1px dashed rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-md);
   display: grid;
   place-items: center;
