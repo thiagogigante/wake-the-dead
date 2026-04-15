@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,8 @@
   <meta name="keywords" content="festival rock mage, wake the dead, evento gratuito rj">
   <meta property="og:title" content="Wake the Dead Festival">
   <meta property="og:description" content="4 dias de rock, evento gratuito em Magé">
-  <meta property="og:image" content="assets/images/logo.png">
+  <!-- CORRIGIDO: og:image com URL absoluta -->
+  <meta property="og:image" content="https://www.wakethedeadfestival.com.br/assets/images/logo.png">
 
   <title>Wake the Dead Festival</title>
 
@@ -20,68 +21,28 @@
   <header class="site-header" id="topo">
     <div class="header-left">
       <img class="logo-mini" src="assets/images/logo.png" alt="Wake the Dead Festival" />
-
       <span class="header-dates">Dias</span>
       <strong class="header-text">14, 15, 16 e 17 </strong>
       <span class="header-dates">de Maio<br>de 2026</span>
-
-
-
     </div>
     <div class="header-right">
       <div class="header-countdown" aria-live="polite">
-        <div class="countdown-unit">
-          <span id="countdown-months">00</span>
-          <small>MES</small>
-        </div>
-        <div class="countdown-unit">
-          <span id="countdown-days">00</span>
-          <small>DIAS</small>
-        </div>
-        <div class="countdown-unit">
-          <span id="countdown-hours">00</span>
-          <small>HRS</small>
-        </div>
-        <div class="countdown-unit">
-          <span id="countdown-minutes">00</span>
-          <small>MINS</small>
-        </div>
-        <div class="countdown-unit">
-          <span id="countdown-seconds">00</span>
-          <small>SEGS</small>
-        </div>
+        <div class="countdown-unit"><span id="countdown-months">00</span><small>MES</small></div>
+        <div class="countdown-unit"><span id="countdown-days">00</span><small>DIAS</small></div>
+        <div class="countdown-unit"><span id="countdown-hours">00</span><small>HRS</small></div>
+        <div class="countdown-unit"><span id="countdown-minutes">00</span><small>MINS</small></div>
+        <div class="countdown-unit"><span id="countdown-seconds">00</span><small>SEGS</small></div>
       </div>
       <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
-<!-- SPOTIFY FIXO NO RODAPÉ PÁGINA COM BALÃO) -->
-<!--
-
-<div class="spotify-balao" id="balao-spotify">
-    <button class="fechar-balao" id="fechar-balao" aria-label="Fechar aviso">×</button>
-    <p> Aperte o Play e ouça as bandas que fazem<br>parte da história do Wake the Dead! 🤘</p>
-  </div>
-   <!- Spotify Bar (fixa no rodape) ->
-<div class="spotify-bar" aria-label="Player do Spotify">
-  
-  <iframe
-    data-testid="embed-iframe"
-    src="https://open.spotify.com/embed/playlist/4lkXEsxhKOrwbWh5jv9HAj?utm_source=generator"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    title="Spotify"
-  ></iframe>
-</div> -->
-
 
   <aside class="side-menu" id="side-menu" aria-hidden="true">
     <div class="side-menu-inner">
       <button class="menu-close" aria-label="Fechar menu">FECHAR ×</button>
-        <div class="menu-divider"></div>
+      <div class="menu-divider"></div>
       <nav class="menu-links">
         <a href="#lineup">LINE-UP</a>
         <a href="#sobre">NOSSO PROPÓSITO</a>
@@ -97,37 +58,27 @@
         <a href="#contato">CONTATO</a>
       </nav>
       <div class="menu-divider"></div>
-
       <div class="menu-social">
         <a class="social-link" href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path>
-          </svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path></svg>
         </a>
-        <a class="social-link" href="https://www.facebook.com/wakethedeadfestival" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path>
-          </svg>
+        <a class="social-link" href="https://www.facebook.com/wakethedeadfestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path></svg>
         </a>
-        <a class="social-link" href="https://open.spotify.com/playlist/4lkXEsxhKOrwbWh5jv9HAj?si=FPQQzv72S2OQsQLf2C0tVg" aria-label="Spotify">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path>
-          </svg>
-          </a>
-          <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"/>
-            </svg>
-          </a>
+        <a class="social-link" href="https://open.spotify.com/playlist/4lkXEsxhKOrwbWh5jv9HAj?si=FPQQzv72S2OQsQLf2C0tVg" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path></svg>
+        </a>
+        <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"/></svg>
+        </a>
       </div>
     </div>
   </aside>
 
-  <!--- FUNDO DE FOTOS -->
-
   <main>
     <section class="hero" id="inicio">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/videos/hero.mp4">
+      <!-- CORRIGIDO: poster aponta para imagem estática, não para o .mp4 -->
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
         <source src="assets/videos/hero.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
@@ -135,12 +86,8 @@
         <p class="hero-edition">15º EDIÇÃO</p>
         <img class="hero-logo" src="assets/images/logo.png" alt="Wake the Dead Festival" />
         <p class="hero-tagline">ONDE A MÚSICA DESPERTA O MUNDO</p>
-        
         <p class="hero-free">EVENTO GRATUITO</p>
-       
         <div class="hero-panel">
-          <!----<h2>PARTICIPE</h2>
-          <p>Acesse os principais pontos do evento:</p>-->
           <div class="panel-grid">
             <a href="#lineup" class="panel-button">LINE-UP</a>
             <a href="#TOUR" class="panel-button">WAKE UP TOUR</a>
@@ -151,39 +98,7 @@
       </div>
     </section>
 
-    <!-- SPOTIFY NO CENTRO DA PÁGINA) -->
-    <!--
-    <iframe class="spotify-embed"
-    data-testid="embed-iframe"
-    src="https://open.spotify.com/embed/playlist/4lkXEsxhKOrwbWh5jv9HAj?utm_source=generator"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    title="Spotify"
-  ></iframe> 
-  -->
-
-
     <section class="section theme-tone-main" id="lineup">
-      <!--<div class="lineup-banner" aria-label="Banner rotativo do Wake the Dead">
-        <div class="lineup-banner-slide">
-          <div class="lineup-banner-content">
-            <p class="lineup-banner-eyebrow">Wake The Dead Festival</p>
-            <h3>Quatro dias de som pesado em Magé</h3>
-          </div>
-        </div>
-        <div class="lineup-banner-slide">
-          <div class="lineup-banner-content">
-            <p class="lineup-banner-eyebrow">15ª Edição</p>
-            <h3>Line-up completo com bandas e convidados especiais</h3>
-          </div>
-        </div>
-        <div class="lineup-banner-slide">
-          <div class="lineup-banner-content">
-            <p class="lineup-banner-eyebrow">Evento Gratuito</p>
-            <h3>14, 15, 16 e 17 de maio de 2026</h3>
-          </div>
-        </div>
-      </div>-->
       <div class="section-header">
         <h2>Line-up</h2>
         <p>Veja a programação completa dos artistas que subirão no palco do Wake the Dead Festival!</p>
@@ -194,93 +109,96 @@
             <h3>DIA 14</h3>
             <p class="schedule-time">Horário: 19h às 01h</p>
           </div>
-          <a href="https://www.instagram.com/bandavortexforever/">
+          <a href="https://www.instagram.com/bandavortexforever/" target="_blank" rel="noopener noreferrer">
             <img class="img-bandas" src="assets/images/line-up/logo vortex.webp" alt="Logo da banda Vortex">
           </a>
-          <a href="https://www.instagram.com/ramonaroxoficial/">
+          <a href="https://www.instagram.com/ramonaroxoficial/" target="_blank" rel="noopener noreferrer">
             <img class="img-bandas" src="assets/images/line-up/logoramonarox.webp" alt="Logo da banda Ramona Rox">
           </a>
-          <a href="https://www.instagram.com/beegeesbrazil.oficial/">
+          <a href="https://www.instagram.com/beegeesbrazil.oficial/" target="_blank" rel="noopener noreferrer">
             <img class="img-bandas" src="assets/images/line-up/logobeegeesbrazil.webp" alt="Logo do Bee Gees Cover Br">
           </a>
         </article>
+
         <article class="schedule-day day-15">
           <div class="schedule-day-head">
             <h3>DIA 15</h3>
             <p class="schedule-time">Horário: 19h às 01h</p>
           </div>
-            <a href="https://www.instagram.com/ratmtributobrazil/">  
-              <img class="img-bandas" src="assets/images/line-up/rageagainst.webp" alt="Logo da banda Rage Against the Machine Tribute"></a>
-            
-            <a href="https://www.instagram.com/p/DW89tISgoSi/">  
-              <img class="img-bandas" src="assets/images/line-up/nosex.webp" alt="Logo da banda NoSex"></a>
-
-              <a href="https://www.instagram.com/zerolinkinpark/">  
-              <img class="img-bandas" src="assets/images/line-up/zero.webp" alt="Logo da banda NoSex"></a>
-
-            <a href="https://www.instagram.com/fuckthesystem_cover_oficial/">  
-              <img class="img-bandas" src="assets/images/line-up/fuckthesystem.webp" alt="Logo da banda Fuck the System"></a>
+          <a href="https://www.instagram.com/ratmtributobrazil/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/rageagainst.webp" alt="Logo da banda Rage Against the Machine Tribute">
+          </a>
+          <a href="https://www.instagram.com/p/DW89tISgoSi/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/nosex.webp" alt="Logo da banda NoSex">
+          </a>
+          <a href="https://www.instagram.com/zerolinkinpark/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/zero.webp" alt="Logo da banda Zero - Linkin Park Cover">
+          </a>
+          <a href="https://www.instagram.com/fuckthesystem_cover_oficial/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/fuckthesystem.webp" alt="Logo da banda Fuck the System">
+          </a>
         </article>
+
         <article class="schedule-day day-16">
           <div class="schedule-day-head">
             <h3>DIA 16</h3>
             <p class="schedule-time">Horário: 19h às 01h</p>
           </div>
-          
-            <a href="">  
-              <img class="img-bandas" src="assets/images/line-up/bandacg125.webp" alt="Logo da banda CG 125"></a>
-        
-            <a href="https://www.instagram.com/silverchair/">  
-              <img class="img-bandas" src="assets/images/line-up/silverchair.webp" alt="Logo da banda Silverchair RJ"></a>
-
-
-            <a href="https://www.instagram.com/ocorooficial/">  
-              <img class="img-bandas" src="assets/images/line-up/ocoro.webp" alt="Logo da banda O Coro"></a>
-          
-            <a href="https://www.instagram.com/oblivious_machine_oficial/">  
-              <img class="img-bandas" src="assets/images/line-up/oblivious machine.webp" alt="Logo da banda Oblivious Machine"></a>  
-                        
-              
-            <a href="https://www.instagram.com/brunosutter/">  
-            <img class="img-bandas" src="assets/images/line-up/BRUNO_SUTTER.webp" alt="Bruno Sutter"></a>
-
-            <a href="https://www.instagram.com/nirvanaspcover/">  
-              <img class="img-bandas" src="assets/images/line-up/incesticide.webp" alt="Logo da banda Incesticide"></a>
-
+          <a href="https://www.instagram.com/bandacg125/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/bandacg125.webp" alt="Logo da banda CG 125">
+          </a>
+          <a href="https://www.instagram.com/silverchair/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/silverchair.webp" alt="Logo da banda Silverchair RJ">
+          </a>
+          <a href="https://www.instagram.com/ocorooficial/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/ocoro.webp" alt="Logo da banda O Coro">
+          </a>
+          <a href="https://www.instagram.com/oblivious_machine_oficial/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/oblivious machine.webp" alt="Logo da banda Oblivious Machine">
+          </a>
+          <a href="https://www.instagram.com/brunosutter/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/BRUNO_SUTTER.webp" alt="Bruno Sutter">
+          </a>
+          <a href="https://www.instagram.com/nirvanaspcover/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/incesticide.webp" alt="Logo da banda Incesticide">
+          </a>
         </article>
+
         <article class="schedule-day day-17">
           <div class="schedule-day-head">
             <h3>DIA 17</h3>
             <p class="schedule-time">Horário: 19h às 01h</p>
           </div>
-            <a href="https://www.instagram.com/viper.kiss/">  
-              <img class="img-bandas" src="assets/images/line-up/viperkiss.webp" alt="Logo da banda Viper Kiss"></a>
-
-              <a href="https://www.instagram.com/Marília Cortês/">  
-              <img class="img-bandas" src="assets/images/line-up/logomariliacortes.webp" alt="Logo da Marília Cortês"></a>
-
-            <a href="https://www.instagram.com/stigma/">  
-              <img class="img-bandas" src="assets/images/line-up/logostigma.webp" alt="Logo da banda Stigma"></a>
-
-            <a href="https://www.instagram.com/theblokes/">  
-              <img class="img-bandas" src="assets/images/line-up/theblokes.webp" alt="Logo da banda The Blokes"></a>
-      
-          <a href="">
+          <a href="https://www.instagram.com/viper.kiss/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/viperkiss.webp" alt="Logo da banda Viper Kiss">
+          </a>
+          <!-- CORRIGIDO: URL sem espaço/acento -->
+          <a href="https://www.instagram.com/mariliacortes/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/logomariliacortes.webp" alt="Logo da Marília Cortês">
+          </a>
+          <a href="https://www.instagram.com/stigma/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/logostigma.webp" alt="Logo da banda Stigma">
+          </a>
+          <a href="https://www.instagram.com/theblokes/" target="_blank" rel="noopener noreferrer">
+            <img class="img-bandas" src="assets/images/line-up/theblokes.webp" alt="Logo da banda The Blokes">
+          </a>
+          <a href="https://www.instagram.com/detonautas/" target="_blank" rel="noopener noreferrer">
             <img class="img-bandas" src="assets/images/line-up/DETONAUTAS_ROCK_CLUB.webp" alt="Banda Detonautas">
           </a>
         </article>
       </div>
+
       <article class="schedule-djs">
         <h3>NOS INTERVALOS</h3>
         <div class="schedule-djs-logos">
           <div class="dj-item">
-            <a href="https://www.instagram.com/botelho6752/">
+            <a href="https://www.instagram.com/botelho6752/" target="_blank" rel="noopener noreferrer">
               <img class="img-bandas" src="assets/images/line-up/djlagarto.webp" alt="DJ Lagarto">
             </a>
             <p class="dj-note">DJ LAGARTO</p>
           </div>
           <div class="dj-item">
-            <a href="https://www.instagram.com/djwagnerfester/">
+            <a href="https://www.instagram.com/djwagnerfester/" target="_blank" rel="noopener noreferrer">
               <img class="img-bandas" src="assets/images/line-up/djfester.webp" alt="DJ Fester">
             </a>
             <p class="dj-note">DJ FESTER</p>
@@ -304,11 +222,15 @@
               diversidade e fortalecimento cultural da Baixada Fluminense.
             </p>
           </div>
-          <div class="sobre-media"><img src="assets/images/sobre/pilar1.jpg" alt="Música Como Transformação e Resistênica"></div>
+          <div class="sobre-media">
+            <img src="assets/images/sobre/pilar1.jpg" alt="Música Como Transformação e Resistência">
+          </div>
         </article>
 
         <article class="sobre-block sobre-block--reverse">
-          <div class="sobre-media"><img src="assets/images/sobre/pilar2.jpg" alt="Sustentabilidade e Território"></div>
+          <div class="sobre-media">
+            <img src="assets/images/sobre/pilar2.jpg" alt="Sustentabilidade e Território">
+          </div>
           <div class="sobre-text">
             <h3>Sustentabilidade e Território</h3>
             <p>
@@ -318,7 +240,8 @@
           </div>
         </article>
 
-        <article class="sobre-block">
+        <!-- NOVO: pilar 3 com imagem + vídeo lado a lado -->
+        <article class="sobre-block sobre-block--pilar3">
           <div class="sobre-text">
             <h3>Pertencimento e Inclusão</h3>
             <p>
@@ -326,7 +249,23 @@
               ativa de públicos historicamente vulnerabilizados.
             </p>
           </div>
-          <div class="sobre-media"><img src="assets/images/sobre/pilar3.jpg" alt="Pertencimento e Inclusão"></div></div>
+          <div class="sobre-media-duo">
+            <img
+              class="sobre-media-duo__img"
+              src="assets/images/sobre/pilar3.jpg"
+              alt="Pertencimento e Inclusão"
+            />
+            <video
+              class="sobre-media-duo__video"
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="assets/images/sobre/pilar3-poster.jpg"
+            >
+              <source src="assets/videos/video-pilar3.mp4" type="video/mp4" />
+            </video>
+          </div>
         </article>
       </div>
     </section>
@@ -360,9 +299,7 @@
       <div class="campanha-banner">
         <p class="campanha-eyebrow">Campanha Solidária</p>
         <h2>1 KG DE ALIMENTO = INGRESSO SOLIDÁRIO DE IMPACTO</h2>
-        <p>
-          Sua contribuição fortalece ações sociais no território e amplia o alcance comunitário do Wake the Dead.
-        </p>
+        <p>Sua contribuição fortalece ações sociais no território e amplia o alcance comunitário do Wake the Dead.</p>
       </div>
     </section>
 
@@ -374,17 +311,11 @@
       <div class="tour-grid">
         <article class="tour-card">
           <h3>Formação Diurna</h3>
-          <p>
-            Atividades guiadas para estudantes de escolas públicas, coletivos culturais e grupos prioritários da
-            Baixada Fluminense.
-          </p>
+          <p>Atividades guiadas para estudantes de escolas públicas, coletivos culturais e grupos prioritários da Baixada Fluminense.</p>
         </article>
         <article class="tour-card">
           <h3>Conexão com o Território</h3>
-          <p>
-            Roteiros em pontos históricos e ambientais de Magé, integrando cultura local, memória e práticas
-            sustentáveis.
-          </p>
+          <p>Roteiros em pontos históricos e ambientais de Magé, integrando cultura local, memória e práticas sustentáveis.</p>
         </article>
       </div>
     </section>
@@ -413,22 +344,26 @@
     <section class="section theme-tone-main" id="localizacao">
       <div class="section-header">
         <h2>Localização</h2>
-        <p>Rua Adam Blumer - Centro - Magé - RJ
-          <br>(Esquina com a Praça Comendador Guilherme / Praça da Banca de Peixe) 
-        </p>
+        <p>Rua Adam Blumer - Centro - Magé - RJ<br>(Esquina com a Praça Comendador Guilherme / Praça da Banca de Peixe)</p>
       </div>
-      <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d618.2905587700336!2d-43.03927394891069!3d-22.65935798185385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99a318942645b7%3A0x73c70659a21a276f!2sPra%C3%A7a%20Comendador%20Guilherme%20-%20Banca%20de%20Peixe!5e0!3m2!1spt-BR!2sbr!4v1775587404324!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d618.2905587700336!2d-43.03927394891069!3d-22.65935798185385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99a318942645b7%3A0x73c70659a21a276f!2sPra%C3%A7a%20Comendador%20Guilherme%20-%20Banca%20de%20Peixe!5e0!3m2!1spt-BR!2sbr!4v1775587404324!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização do Wake the Dead Festival"
+      ></iframe>
     </section>
 
     <section class="section theme-tone-main" id="VAGAS">
       <div class="section-header">
-        <h2>Estágio e Voluntário</h2>
-        <p>Faça parte da equipe do Wake the Dead Festival e atue na produção cultural do território.</p>
+        <h2>Voluntariado</h2>
+        <p><b>As inscrições abrem em breve, fique de olho nas redes sociais!</b>
+          <br>Venha fazer parte da equipe do Wake the Dead Festival e atue na produção cultural do território.</p>
       </div>
       <div class="vagas-card">
-        <p>
-          O festival conta com oportunidades para estagiários e voluntários em produção, comunicação, recepção,
-          acessibilidade e apoio de operações.
+        <p>O festival conta com oportunidades para voluntários em produção, comunicação, recepção, acessibilidade e apoio de operações.
+            Além de vivenciar a experiência de um grande evento cultural, os voluntários recebem certificado de participação e têm a chance de contribuir diretamente para o sucesso do festival, fortalecendo a cena cultural local e ampliando seu network no setor.
         </p>
         <a class="panel-button vagas-button" href="#contato">Quero me candidatar</a>
       </div>
@@ -436,7 +371,6 @@
 
     <section class="section history theme-bg-noise" id="historia">
       <div class="section-header">
-        
         <h2>História</h2>
         <p>15 edições construindo uma comunidade apaixonada por música pesada.</p>
       </div>
@@ -444,122 +378,52 @@
       <div class="history-stack">
         <article class="history-block">
           <div class="history-media">
-            <img class="img-destaque,img-bandas" src="assets/images/allanaguiar.webp">
+            <img src="assets/images/allanaguiar.webp" alt="Allan Aguiar, idealizador do Wake the Dead Festival">
           </div>
           <div class="history-text">
             <h3>Allan Aguiar</h3>
-            <p>
-Allan é o idealizador do Wake the Dead Festival e uma das forças por trás do movimento cultural que conecta música, território e transformação social na Baixada Fluminense. Sua trajetória nasce dentro da própria cena, ainda na época em que foi baterista da banda Nobres Causas, quando os primeiros eventos já carregavam um propósito que ia além do palco. Allan persiste com essa essência, transformando o festival em uma plataforma de oportunidades, inclusão e consciência ambiental.
-</p><br>
-Com mais de uma década de atuação, Allan consolidou o Wake the Dead como um dos principais pontos de encontro da cena underground regional. Ao longo de mais de 15 edições, o festival abriu espaço para artistas independentes, fortaleceu a música autoral e contribuiu para revelar bandas que posteriormente alcançaram grandes palcos no cenário nacional. Seu trabalho também ganhou reconhecimento em veículos relevantes, ampliando o alcance do movimento.
-<p><br></p>
-Além da produção cultural, Allan atua como gestor ambiental, integrando práticas sustentáveis ao festival e alinhando o projeto aos Objetivos de Desenvolvimento Sustentável (ODS). Sua atuação vai além da música: envolve inclusão social, acessibilidade, educação ambiental e fortalecimento da economia local. Mais do que produzir eventos, Allan constrói experiências que deixam legado e mostram, na prática, o poder transformador da cultura.            </p>
+            <p>Allan é o idealizador do Wake the Dead Festival e uma das forças por trás do movimento cultural que conecta música, território e transformação social na Baixada Fluminense. Sua trajetória nasce dentro da própria cena, ainda na época em que foi baterista da banda Nobres Causas, quando os primeiros eventos já carregavam um propósito que ia além do palco.</p>
+            <p>Com mais de uma década de atuação, Allan consolidou o Wake the Dead como um dos principais pontos de encontro da cena underground regional. Ao longo de mais de 15 edições, o festival abriu espaço para artistas independentes, fortaleceu a música autoral e contribuiu para revelar bandas que posteriormente alcançaram grandes palcos no cenário nacional.</p>
+            <p>Além da produção cultural, Allan atua como gestor ambiental, integrando práticas sustentáveis ao festival e alinhando o projeto aos Objetivos de Desenvolvimento Sustentável (ODS). Sua atuação vai além da música: envolve inclusão social, acessibilidade, educação ambiental e fortalecimento da economia local.</p>
           </div>
         </article>
 
+        <!-- CORRIGIDO: sem img solta fora de .history-media, sem placeholder de texto -->
         <article class="history-block history-block--reverse">
-          <img class="img-destaque" src="assets/images/Ingrid.png" alt="Imagem da Estética Sonora">
-
           <div class="history-text">
             <h3>Estética Sonora</h3>
-            <p>
-              A Estética Sonora Produções é uma empresa cultural sediada em Magé/RJ, que atua no desenvolvimento, planejamento e execução de projetos e experiências no setor de artes, cultura e entretenimento. Com visão estratégica e sensibilidade artística, a produtora se destaca pela criação de iniciativas com identidade, organização e impacto no território.
-</p><br><p>
-À frente da Estética Sonora está Ingrid Souza, responsável pela condução executiva e articulação dos projetos. No Wake the Dead Festival, a produtora atua como parceira estratégica, sendo responsável pela construção da proposta, estruturação do edital e produção executiva do evento.
-</p><br>
-Mais do que uma colaboração, essa parceria fortalece o festival como um projeto consistente, viável e conectado com o mercado cultural, ampliando seu alcance e consolidando seu impacto na cena independente.
-            </p>
-
+            <p>A Estética Sonora Produções é uma empresa cultural sediada em Magé/RJ, que atua no desenvolvimento, planejamento e execução de projetos e experiências no setor de artes, cultura e entretenimento. Com visão estratégica e sensibilidade artística, a produtora se destaca pela criação de iniciativas com identidade, organização e impacto no território.</p>
+            <p>À frente da Estética Sonora está Ingrid Souza, responsável pela condução executiva e articulação dos projetos. No Wake the Dead Festival, a produtora atua como parceira estratégica, sendo responsável pela construção da proposta, estruturação do edital e produção executiva do evento.</p>
+            <p>Mais do que uma colaboração, essa parceria fortalece o festival como um projeto consistente, viável e conectado com o mercado cultural, ampliando seu alcance e consolidando seu impacto na cena independente.</p>
           </div>
-          <div class="history-media">Imagem</div>
+          <div class="history-media">
+            <img src="assets/images/Ingrid.png" alt="Ingrid Souza, Estética Sonora Produções">
+          </div>
         </article>
 
-                <article class="history-block history-block--full">
+        <article class="history-block history-block--full">
           <div class="history-text">
             <h3>Time-Line</h3>
-            <p>
-              Confere aí a Linha do tempo com os Flyers de todas as Edições do Wake the Dead.
-            </p>
+            <p>Confere aí a Linha do tempo com os Flyers de todas as Edições do Wake the Dead.</p>
           </div>
-
           <div class="timeline-carousel" data-carousel>
             <button class="carousel-btn prev" type="button" aria-label="Anterior">‹</button>
             <div class="carousel-track" role="list">
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 1</div>
-                <img class="flyer" src="assets/images/timeline/2011 - ED01.jpg" alt="Flyer da 1º Edição"/>
-                <div class="edition-sub">03/09/2011</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 2</div>
-                <img class="flyer" src="assets/images/timeline/2012 - ED02.jpg" alt="Flyer da 2º Edição"/>
-                <div class="edition-sub">28/07/2012</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 3</div>
-                <img class="flyer" src="assets/images/timeline/2013 - ED03.jpg" alt="Flyer da 3º Edição"/>
-                <div class="edition-sub">20/10/2013</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 4</div>
-                <img class="flyer" src="assets/images/timeline/2014 - ED04.jpg" alt="Flyer da 4º Edição"/>
-                <div class="edition-sub">14/09/2014</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 5</div>
-                <img class="flyer" src="assets/images/timeline/2015 - ED05.jpg" alt="Flyer da 5º Edição"/>
-                <div class="edition-sub">20/06/2015</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 6</div>
-                <img class="flyer" src="assets/images/timeline/2016 - ED06.jpg" alt="Flyer da 6º Edição"/>
-                <div class="edition-sub">23/01/2016</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 7</div>
-                <img class="flyer" src="assets/images/timeline/2016 - ED07.jpg" alt="Flyer da 7º Edição"/>
-                <div class="edition-sub">18/06/2016</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 8</div>
-                <img class="flyer" src="assets/images/timeline/2016 - ED08.jpg" alt="Flyer da 8º Edição"/>
-                <div class="edition-sub">08/10/2016</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 9</div>
-                <img class="flyer" src="assets/images/timeline/2017 - ED09.jpg" alt="Flyer da 9º Edição"/>
-                <div class="edition-sub">15/04/2017</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 10</div>
-                <img class="flyer" src="assets/images/timeline/2017 - ED10.jpg" alt="Flyer da 10º Edição"/>
-                <div class="edition-sub">18/11/2017</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 11</div>
-                <img class="flyer" src="assets/images/timeline/2023 - ED11.jpg" alt="Flyer da 11º Edição"/>
-                <div class="edition-sub">06/05/2023</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 12</div>
-                <img class="flyer" src="assets/images/timeline/2024 - ED12.jpg" alt="Flyer da 12º Edição"/>
-                <div class="edition-sub">11/05/2024</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 13</div>
-                <img class="flyer" src="assets/images/timeline/2024 - ED13.jpg" alt="Flyer da 13º Edição"/>
-                <div class="edition-sub">14/12/2024</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 14</div>
-                <img class="flyer" src="assets/images/timeline/2025 - ED14.jpg" alt="Flyer da 14º Edição"/>
-                <div class="edition-sub">17 e 18/05/2025</div>
-              </div>
-              <div class="carousel-item" role="listitem">
-                <div class="edition-title">Edição 15</div>
-                <img class="flyer" src="assets/images/timeline/2026 - ED15.jpg" alt="Flyer da 15º Edição"/>
-                <div class="edition-sub">14, 15, 16 e 17/05/2026</div>
-              </div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 1</div><img class="flyer" src="assets/images/timeline/2011 - ED01.jpg" alt="Flyer da 1ª Edição"/><div class="edition-sub">03/09/2011</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 2</div><img class="flyer" src="assets/images/timeline/2012 - ED02.jpg" alt="Flyer da 2ª Edição"/><div class="edition-sub">28/07/2012</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 3</div><img class="flyer" src="assets/images/timeline/2013 - ED03.jpg" alt="Flyer da 3ª Edição"/><div class="edition-sub">20/10/2013</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 4</div><img class="flyer" src="assets/images/timeline/2014 - ED04.jpg" alt="Flyer da 4ª Edição"/><div class="edition-sub">14/09/2014</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 5</div><img class="flyer" src="assets/images/timeline/2015 - ED05.jpg" alt="Flyer da 5ª Edição"/><div class="edition-sub">20/06/2015</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 6</div><img class="flyer" src="assets/images/timeline/2016 - ED06.jpg" alt="Flyer da 6ª Edição"/><div class="edition-sub">23/01/2016</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 7</div><img class="flyer" src="assets/images/timeline/2016 - ED07.jpg" alt="Flyer da 7ª Edição"/><div class="edition-sub">18/06/2016</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 8</div><img class="flyer" src="assets/images/timeline/2016 - ED08.jpg" alt="Flyer da 8ª Edição"/><div class="edition-sub">08/10/2016</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 9</div><img class="flyer" src="assets/images/timeline/2017 - ED09.jpg" alt="Flyer da 9ª Edição"/><div class="edition-sub">15/04/2017</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 10</div><img class="flyer" src="assets/images/timeline/2017 - ED10.jpg" alt="Flyer da 10ª Edição"/><div class="edition-sub">18/11/2017</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 11</div><img class="flyer" src="assets/images/timeline/2023 - ED11.jpg" alt="Flyer da 11ª Edição"/><div class="edition-sub">06/05/2023</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 12</div><img class="flyer" src="assets/images/timeline/2024 - ED12.jpg" alt="Flyer da 12ª Edição"/><div class="edition-sub">11/05/2024</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 13</div><img class="flyer" src="assets/images/timeline/2024 - ED13.jpg" alt="Flyer da 13ª Edição"/><div class="edition-sub">14/12/2024</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 14</div><img class="flyer" src="assets/images/timeline/2025 - ED14.jpg" alt="Flyer da 14ª Edição"/><div class="edition-sub">17 e 18/05/2025</div></div>
+              <div class="carousel-item" role="listitem"><div class="edition-title">Edição 15</div><img class="flyer" src="assets/images/timeline/2026 - ED15.jpg" alt="Flyer da 15ª Edição"/><div class="edition-sub">14, 15, 16 e 17/05/2026</div></div>
             </div>
             <button class="carousel-btn next" type="button" aria-label="Próximo">›</button>
           </div>
@@ -567,7 +431,6 @@ Mais do que uma colaboração, essa parceria fortalece o festival como um projet
       </div>
     </section>
 
-    
     <section class="section theme-tone-main" id="realizacao">
       <div class="section-header">
         <h2>Realização</h2>
@@ -594,67 +457,52 @@ Mais do que uma colaboração, essa parceria fortalece o festival como um projet
       </div>
     </section>
 
+    <!-- CORRIGIDO: section fechada corretamente, footer fora dela -->
     <section class="section theme-tone-main" id="contato">
       <div class="section-header">
-        <h2>CONTATO</h2></div>
-      <div class="contact-grid">  
+        <h2>CONTATO</h2>
+      </div>
+      <div class="contact-grid">
         <div>
           <p><b>Fale conosco através do e-mail:</b> wakethedead@gmail.com</p>
-
-            <form 
-            class="contact-form" 
-            action="https://formspree.io/f/mgorwlgq" 
-            method="POST">
-
-              <div class="form-row">
-                <input type="text" name="nome" placeholder="Seu Nome *" required>
-                <input type="email" name="email" placeholder="Seu Email *" required>
-                <input type="text" name="assunto" placeholder="Assunto">
-              </div>
-
-              <textarea name="mensagem" placeholder="Mensagem"></textarea>
-              
-              <div class="form-actions">
-                <!--<input type="file" name="arquivo">-->
-                <button type="submit">Enviar</button>
-                <p class="form-status"></p>
-              </div>
-            </form>
-            </div>           
-
+          <form class="contact-form" action="https://formspree.io/f/mgorwlgq" method="POST">
+            <div class="form-row">
+              <input type="text" name="nome" placeholder="Seu Nome *" required>
+              <input type="email" name="email" placeholder="Seu Email *" required>
+              <input type="text" name="assunto" placeholder="Assunto">
+            </div>
+            <textarea name="mensagem" placeholder="Mensagem"></textarea>
+            <div class="form-actions">
+              <button type="submit">Enviar</button>
+              <p class="form-status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
         <div class="contact-social">
-        <a class="social-link" href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path>
-          </svg></a>
-
-        <a class="social-link" href="https://www.facebook.com/wakethedeadfestival" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path>
-          </svg></a>
-
-        <a class="social-link" href="https://open.spotify.com/playlist/4lkXEsxhKOrwbWh5jv9HAj?si=FPQQzv72S2OQsQLf2C0tVg" aria-label="Spotify">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path>
-          </svg></a>
-
-        <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"></path>
-          </svg></a>
-      <div><p id="follow">Siga-nos!</p></div></div>
-
+          <a class="social-link" href="https://www.instagram.com/wakethedeadfestival/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A4.8 4.8 0 1 1 7.2 13 4.8 4.8 0 0 1 12 8.2zm0 2A2.8 2.8 0 1 0 14.8 13 2.8 2.8 0 0 0 12 10.2zm5.1-2.7a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"></path></svg>
+          </a>
+          <a class="social-link" href="https://www.facebook.com/wakethedeadfestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.7V7.2c0-.8.5-1 1-1h2V3h-3c-2.6 0-4 1.7-4 4v1.7H8v3.1h2V21h3.4v-9.2H16l.5-3.1z"></path></svg>
+          </a>
+          <a class="social-link" href="https://open.spotify.com/playlist/4lkXEsxhKOrwbWh5jv9HAj?si=FPQQzv72S2OQsQLf2C0tVg" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm4.2 13.1a.9.9 0 0 1-1.2.3 8 8 0 0 0-6.6-.7.9.9 0 1 1-.5-1.8 9.8 9.8 0 0 1 8.1.9.9.9 0 0 1 .2 1.3zm1.1-2.7a1 1 0 0 1-1.4.3 10.5 10.5 0 0 0-7.9-1 1 1 0 1 1-.6-1.9 12.3 12.3 0 0 1 9.3 1.2 1 1 0 0 1 .6 1.4zm.1-2.8A1.2 1.2 0 0 1 16 11a12.5 12.5 0 0 0-8.4-1.1 1.2 1.2 0 1 1-.7-2.2 14.7 14.7 0 0 1 9.9 1.3 1.2 1.2 0 0 1 .6 1.6z"></path></svg>
+          </a>
+          <a class="social-link" href="https://youtube.com/@wakethedeadfestival877?si=_0_zV6ug-VaVL765" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a2.9 2.9 0 0 0-2-2.1C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.5.6a2.9 2.9 0 0 0-2 2.1C0 8 0 12 0 12s0 4 .5 5.8a2.9 2.9 0 0 0 2 2.1c1.7.6 9.5.6 9.5.6s7.8 0 9.5-.6a2.9 2.9 0 0 0 2-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.7 15.5v-7l6.2 3.5-6.2 3.5z"></path></svg>
+          </a>
+          <p id="follow">Siga-nos!</p>
+        </div>
+      </div>
     </section>
 
     <img class="bottom-zombie" src="assets/images/botton.png" alt="Wake the Dead Festival"/>
   </main>
 
   <footer class="site-footer">
-    <p>Wake the Dead Festival - 15ª Edição - Onde a Música Desperta o Mundo!</p> 
+    <p>Wake the Dead Festival - 15ª Edição - Onde a Música Desperta o Mundo!</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
