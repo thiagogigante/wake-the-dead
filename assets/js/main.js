@@ -278,4 +278,30 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     status.innerHTML = "Erro de conexão.";
   }
+
+// Botão voltar ao topo
+const backToTopBtn = document.getElementById('back-to-top');
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+  if (window.scrollY > 100) {
+    scrollIndicator.classList.add('hidden');
+  } else {
+    scrollIndicator.classList.remove('hidden');
+  }
 });
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+}); // FECHA A DOM 
