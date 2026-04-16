@@ -295,17 +295,17 @@ img {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background: var(--section-bg, rgba(8, 10, 22, 0.65));
   opacity: 0;
   transform: translateY(40px);
   transition: 0.6s ease;
+  /* background: var(--section-bg); */
 }
 
 .section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--section-overlay, transparent);
+  /* background: var(--section-overlay, transparent); */
   pointer-events: none;
 }
 
@@ -340,26 +340,13 @@ img {
   --section-overlay: linear-gradient(0deg, #ff8a1f, #f9c332);
 }
 
-.theme-bg-noise {
-  --section-bg: linear-gradient(10deg, rgba(131, 25, 189, 0.84), rgba(4, 0, 10, 0.863)),
-    url("../images/bg6.avif") center / cover no-repeat;
-  --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14));
-}
 
 .theme-skull {
-  --section-bg: linear-gradient(120deg,  rgba(49, 9, 75, 0.87), rgba(0, 0, 0, 0.562)),
-    url("../images/pattern-skullstyle.jpg") center / 360px repeat;
-  --section-overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0));
+
 }
 
 .theme-tour {
-     --section-bg: linear-gradient(145deg, rgba(123, 224, 30, 0.15), rgba(29, 155, 17, 0.82));
-  --section-overlay: linear-gradient(0deg, rgba(100, 150, 63, 0.829), rgb(255, 255, 255));
-
-  /* --section-bg: 
-    url("../images/wut/capa wut.png") center / 100% no-repeat; */
 }
-
 
 .section-header {
   margin-bottom: 32px;
@@ -391,60 +378,15 @@ img {
   --section-bg: transparent;
 }
 
-/* =========================================================
-   Impact
-========================================================= */
-/* CORRIGIDO: grid-template-columns: auto-fit era valor inválido */
-.impact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
 
-@media (min-width: 900px) {
-  .impact-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-.impact-card {
-  background: var(--surface);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: var(--shadow-hard);
-  border: 1px solid rgba(255, 255, 255, 0);
-  display: grid;
-  gap: 8px;
-}
-
-.impact-card strong {
-  font-size: 1.9rem;
-  letter-spacing: 1px;
-  color: var(--gold-400);
-}
-
-.impact-card span {
-  color: var(--text);
-  font-size: 0.92rem;
-  line-height: 1.35;
-}
-
-.impact-card {
-  background: linear-gradient(0deg, rgba(42, 245, 23, 0.829), rgb(30, 105, 11));
-  border-color: rgba(123, 224, 30, 0.36);
-}
-
-#impacto .impact-card strong {
-  color: #a8f870;
-}
 
 /* =========================================================
    Campanha
 ========================================================= */
 .campanha-banner {
   width: 100%;
-  background: linear-gradient(140deg, rgba(123, 224, 30, 0.3), rgba(18, 0, 20, 0.9));
-  border: 1px solid rgba(123, 224, 30, 0.4);
+  background: linear-gradient(120deg,  #f9c332,  #ff8a1f);
+  border: 1px solid var(--gold-400);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-hard);
   padding: 26px 24px;
@@ -471,21 +413,8 @@ img {
 }
 
 /* =========================================================
-   Tour / Access / voluntario
+   Tour + Access + voluntario
 ========================================================= */
-.banner-tour img{
-  border-radius: var(--radius-md);
-}
-.access-grid {
-}
-.access-card{
-   background: linear-gradient(0deg, rgba(245, 23, 171, 0.829), rgb(105, 11, 77));
-   box-shadow: var(--shadow-hard);
-   padding: 20px;
-
-}
-
-.tour-grid,
 .access-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -499,10 +428,6 @@ img {
   border: 1px solid rgba(245, 23, 171, 0.829);
 }
 
-.access-card{
-   box-shadow: var(--shadow-hard);
-}
-
 .tour-card h3,
 .access-card h3 {
   margin: 0 0 10px;
@@ -510,7 +435,6 @@ img {
   letter-spacing: 1px;
 }
 
-.tour-card p,
 .access-card p,
 .voluntario-card p {
   margin: 0;
@@ -518,7 +442,83 @@ img {
   line-height: 1.45;
 }
 
+.access-card{
+   background: linear-gradient(0deg, rgba(245, 23, 171, 0.829), rgb(105, 11, 77));
+   box-shadow: var(--shadow-hard);
+   padding: 20px;
+}
+
+
+/* =========================================================
+   Só Tour
+========================================================= */
+.tour{
+    background: linear-gradient(170deg, rgba(48, 97, 26, 0.753),rgba(7, 19, 2, 0.747), rgba(101, 150, 63, 0.644));
+ }
+
+.tour-card p{
+  margin: 0;
+  color: #6a3079 !important;
+  line-height: 1.45;
+}
+
+.tour-grid {
+  display: flex;
+  justify-content: center; /* Centraliza os cards no meio da tela */
+  align-items: center;
+  flex-wrap: wrap; /* Permite que os cards quebrem de linha em telas pequenas */
+  gap: 30px; /* Espaço entre os cards, caso você adicione mais de um */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.banner-tour img{
+  border-radius: var(--radius-md);
+  /* Adicione estas linhas para centralizar e reduzir o tamanho */
+  display: block;
+  margin: 0 auto;
+  max-width: 80%; /* Ajuste para o tamanho desejado, ex.: 80% da largura do container */
+  width: auto; /* Mantém proporção */
+  height: auto;
+}
+
+.tour-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza itens verticalmente */
+  width: 60%;
+  /* Adicione padding ou gap se necessário para espaçamento */
+  gap: 10px; /* Espaço entre imagem e botão */
+}
+
+
+
+/* =========================================================
+    Só Access / 
+========================================================= */
+
+.access-card{
+   box-shadow: var(--shadow-hard);
+}
+
+/* =========================================================
+   Só Voluntario
+========================================================= */
+.voluntario {
+  background-image:
+    linear-gradient(rgba(3, 19, 2, 0.575), rgba(2, 19, 4, 0.664)),
+    url("../images/pattern-skullstyle.jpg");
+  background-position: center;
+  background-size: 500px;
+  background-repeat: repeat;
+}
+
 .voluntario-card {
+  
+  background-image:
+    linear-gradient(rgba(68, 4, 68, 0.705), rgba(129, 20, 126, 0.616));
+  background-repeat: repeat;
+
   display: grid;
   gap: 14px;
 }
@@ -526,6 +526,7 @@ img {
 .voluntario-button {
   justify-self: start;
 }
+
 
 /* =========================================================
    Line-up
@@ -618,7 +619,9 @@ img {
   margin: 18px auto 0;
   width: 100%;
   max-width: 760px;
-  background: linear-gradient(145deg, rgba(43, 0, 55, 0.84), rgba(28, 0, 38, 0.8));
+  background: linear-gradient(140deg, #6a3079 0%, #821f8f 100%,  #42113c 50%,);
+
+  /* background: linear-gradient(145deg, rgba(43, 0, 55, 0.84), rgba(28, 0, 38, 0.8)); */
   border-radius: var(--radius-md);
   padding: 12px 16px;
   box-shadow: var(--shadow-hard);
@@ -772,6 +775,52 @@ img {
 
 .sobre-block--pilar3 {
   overflow: visible;
+}
+
+/* =========================================================
+   Impact
+========================================================= */
+/* CORRIGIDO: grid-template-columns: auto-fit era valor inválido */
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 900px) {
+  .impact-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.impact-card {
+
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-hard);
+  border: 1px solid rgba(255, 255, 255, 0);
+  display: grid;
+  gap: 8px;
+ 
+  background: linear-gradient(0deg, rgba(42, 245, 23, 0.829), rgb(30, 105, 11));
+  border-color: rgba(123, 224, 30, 0.36);
+
+}
+
+.impact-card strong {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  color: var(--gold-400);
+}
+
+.impact-card span {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+#impacto .impact-card strong {
+  color: #a8f870;
 }
 
 /* =========================================================
