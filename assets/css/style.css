@@ -184,6 +184,7 @@ img {
   background-clip: text;
   color: transparent;
   filter: drop-shadow(0px 1.5px 0 #1200149a);
+  transform: translateZ(0);
 }
 
 /* Contagem regressiva */
@@ -214,6 +215,7 @@ img {
   background-clip: text;
   color: transparent;
   filter: drop-shadow(0px 1.5px 0 #1200149a);
+  transform: translateZ(0);
 }
 
 /* Hamburger */
@@ -258,15 +260,18 @@ img {
 ========================================================= */
 .hero {
   position: relative;
-  height: 100dvh; /* dvh funciona melhor em mobile */
+  /* height: 100dvh; dvh funciona melhor em mobile */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100dvh - var(--header-h));
+  min-height: calc(100vh - 70px);
+  /* min-height: calc(100dvh - var(--header-h)); */
   /* Garante full-bleed sem offset de margin */
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 /* Wrapper do vídeo — o JS injeta a tag <video> aqui */
@@ -275,6 +280,8 @@ img {
   inset: 0;
   z-index: 0;
   background: var(--violet-900); /* fallback antes do vídeo */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
 }
 
 .hero-video-wrap video {
@@ -283,8 +290,6 @@ img {
   object-fit: cover;
   opacity: 0.6;
   filter: saturate(1.2);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
 }
 
 .hero-overlay {
@@ -292,6 +297,8 @@ img {
   inset: 0;
   background: var(--overlay);
   z-index: 1;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 65%, rgba(0,0,0,0.2) 85%, transparent 100%);
 }
 
 .hero-content {
@@ -638,10 +645,11 @@ img {
   border-radius: var(--radius-md);
   padding: clamp(16px, 3vw, 20px);
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
-  align-items: center;
   box-shadow: var(--shadow-hard);
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr;
+
 }
 
 @media (min-width: 640px) {
@@ -656,7 +664,7 @@ img {
 
 .sobre-media {
   width: 100%;
-  min-height: 200px;
+  min-height: calc(20vh - 70px); /* antigo 200pxGarante altura mínima para full-bleed */
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--surface-strong);
@@ -686,9 +694,9 @@ img {
 
 .sobre-media-duo {
   display: grid;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 8fr 4fr;
   gap: 10px;
-  height: 300px;
+  height: 100vh;
 }
 
 @media (max-width: 600px) {
@@ -717,7 +725,7 @@ img {
 ========================================================= */
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 18px;
 }
 
@@ -736,6 +744,7 @@ img {
   font-size: clamp(1.4rem, 3vw, 1.9rem);
   letter-spacing: 1px;
   color: #a8f870;
+  font-size: larger;
 }
 
 .impact-card span {
@@ -788,12 +797,11 @@ img {
 
 .tour-block {
   border-radius: var(--radius-md);
-  padding: clamp(12px, 2.5vw, 20px);
+  padding: clamp(2px, 2.5vw, 20px);
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   align-items: start;
-
 }
 
 @media (min-width: 640px) {
@@ -812,16 +820,24 @@ img {
   border-radius: var(--radius-md);
   overflow: hidden;
   object-fit: cover;
-  }
+}
 
 .tour-media img{
   justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.tour-beneficios {
+.tour-info-block {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.tour-beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 8px;
+
 }
 
 .logo-card {
@@ -1144,7 +1160,7 @@ img {
   align-items: center;
 }
 
-.logo-placeholder {
+.logo-apoio {
   width: 100%;
   min-height: 80px;
   border-radius: var(--radius-md);
@@ -1155,12 +1171,14 @@ img {
   letter-spacing: 1px;
   font-weight: 700;
   background: transparent;
+  overflow: hidden;
 }
 
-.logo-placeholder img {
+.logo-apoio img {
   max-height: 80px;
   width: auto;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 /* =========================================================
@@ -1358,16 +1376,19 @@ img {
 }
 
 .side-menu-inner {
-  padding: clamp(70px, 12vw, 96px) clamp(24px, 5vw, 36px) 36px clamp(32px, 6vw, 48px);
+  /* Padding usa vh para escalar em telas curtas */
+  padding: clamp(60px, 10vh, 96px) clamp(24px, 5vw, 36px) clamp(20px, 4vh, 36px) clamp(32px, 6vw, 48px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(10px, 2vh, 20px);
+  height: 100%;
+  justify-content: center;
 }
 
 .menu-close {
   position: absolute;
-  top: 38px;
-  right: 18px;
+  top: 20px;
+  right: 20px;
   background: transparent;
   border: none;
   color: var(--violet-950);
@@ -1405,7 +1426,8 @@ img {
 .menu-links a {
   display: inline-block;
   text-align: right;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  /* Font size usa vh em vez de vw, priorizando o ajuste com a altura da tela */
+  font-size: clamp(1rem, 2.8vh, 1.5rem);
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1417,7 +1439,7 @@ img {
   filter: drop-shadow(0px 1.5px 0 #1200149a);
   transition: transform var(--transition), filter var(--transition);
   /* Área de toque mínima */
-  padding: 4px 0;
+  padding: clamp(2px, 0.5vh, 4px) 0;
 }
 
 .menu-links a:hover,
@@ -1469,12 +1491,18 @@ img {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s, transform var(--transition);
-  z-index: 1000;
+  z-index: 90; /* Mantém abaixo do menu lateral (100) e overlay (99) */
 }
 
 .back-to-top-btn.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Oculta ativamente o botão quando o menu estiver aberto */
+body:has(.side-menu.open) .back-to-top-btn {
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .back-to-top-btn:hover,
@@ -1488,7 +1516,7 @@ img {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 90;
   animation: bounce 2s infinite;
   transition: opacity 0.3s;
   pointer-events: none;
@@ -1496,6 +1524,11 @@ img {
 
 .scroll-indicator.hidden {
   opacity: 0;
+}
+
+/* Oculta ativamente o indicador de scroll quando o menu estiver aberto */
+body:has(.side-menu.open) .scroll-indicator {
+  opacity: 0 !important;
 }
 
 @keyframes bounce {
