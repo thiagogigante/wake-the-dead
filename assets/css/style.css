@@ -191,7 +191,7 @@ img {
 .header-countdown {
   display: grid;
   grid-auto-flow: column;
-  gap: clamp(6px, 1vw, 14px);
+  gap: clamp(12px, 2vw, 20px);
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
@@ -379,6 +379,15 @@ img {
 .tour-block .panel-button {
   margin: 0 auto;
   width: fit-content;
+}
+
+.voluntario-button {
+  display: inline-block;
+  width: auto;
+  min-width: unset;
+  max-width: fit-content;
+  justify-self: start;
+  padding: 10px 18px;
 }
 
 .tour-action {
@@ -1775,7 +1784,28 @@ body:has(.side-menu.open) .scroll-indicator {
 }
 
 @media (max-width: 480px) {
-  .header-dates {
+  .header-dates:first-of-type {
     display: none;
   }
+
+  .header-dates:last-of-type {
+    display: none;
+  }
+
+  .header-text {
+    white-space: normal;
+  }
+
+  .header-countdown {
+    gap: 10px;
+  }
+
+  .countdown-unit span {
+    font-size: 0.7rem;
+  }
+
+  .countdown-unit small {
+    font-size: 0.5rem;
+  }
 }
+
