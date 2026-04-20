@@ -654,7 +654,13 @@ img {
   box-shadow: var(--shadow-hard);
   align-items: stretch;
   grid-template-columns: 1fr 1fr;
+}
 
+/* Garante que o pilar3 empilhe seus itens de forma linear em uma única coluna */
+.sobre-block.sobre-block--pilar3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (min-width: 640px) {
@@ -669,7 +675,7 @@ img {
 
 .sobre-media {
   width: 100%;
-  min-height: calc(20vh - 70px); /* antigo 200pxGarante altura mínima para full-bleed */
+  min-height: calc(40vh - 70px); /* antigo 200pxGarante altura mínima para full-bleed */
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--surface-strong);
@@ -697,11 +703,74 @@ img {
   line-height: 1.55;
 }
 
+/* Slider de Fotos - Pertencimento */
+.pertencimento-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface-strong);
+  /* Impede que as transições internas afetem o layout externo (Performance) */
+  contain: paint layout;
+}
+
+.pertencimento-slider .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+
+.pertencimento-slider .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Container para Citação e Caveira */
+.quote-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 0;
+  padding: 12px 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 3px solid var(--accent-green);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+
+ 
+}
+
+.quote-container img {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.quote-container i {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-style: italic;
+
+}
+
 .sobre-media-duo {
   display: grid;
-  grid-template-columns: 8fr 4fr;
-  gap: 10px;
-  height: 100vh;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 16px;
+  height: clamp(280px, 35vw, 480px);
+  /* Centraliza a mídia na tela garantindo que o texto/citação fiquem mais largos que ela */
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -710,19 +779,89 @@ img {
     height: auto;
   }
 
-  .sobre-media-duo__img,
+  .pertencimento-slider,
   .sobre-media-duo__video {
-    height: 240px;
+    height: 300px;
   }
 }
 
-.sobre-media-duo__img,
 .sobre-media-duo__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: var(--radius-md);
   display: block;
+  min-height: 0;
+}
+
+/* =========================================================
+   Educação Ambiental
+========================================================= */
+.educacao-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.educacao-card {
+  /* Reutiliza a base do .impact-card limitando a largura */
+  max-width: 760px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.educacao-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.educacao-text h3 {
+  margin: 0;
+  color: #a8f870;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  letter-spacing: 1px;
+}
+
+.educacao-text p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.educacao-btn {
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.educacao-media {
+  display: flex;
+  justify-content: center;
+}
+
+.educacao-media img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .educacao-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .educacao-btn {
+    margin: 8px auto 0;
+  }
+  
+  .educacao-media img {
+    max-width: 220px;
+  }
 }
 
 /* =========================================================
@@ -732,6 +871,13 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 18px;
+}
+
+/* Força os cards de impacto a empilharem (1 coluna) em telas de celular */
+@media (max-width: 600px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .impact-card {
@@ -790,6 +936,12 @@ img {
   color: var(--text);
 }
 
+.campanha-banner img {
+  margin-top: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* =========================================================
    Wake Up Tour
 ========================================================= */
@@ -842,7 +994,13 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 8px;
+}
 
+/* Força exatamente 3 itens por linha nos benefícios em telas de celular */
+@media (max-width: 600px) {
+  .tour-beneficios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .logo-card {

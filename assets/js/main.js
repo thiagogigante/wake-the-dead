@@ -452,3 +452,55 @@ function sanitizeText(str) {
     });
   }
 })();
+
+/* =========================================================
+   Slider Pertencimento
+========================================================= */
+(function initPertencimentoSlider() {
+  const slider = document.getElementById("pertencimento-slider");
+  if (!slider) return;
+  
+  // Injeta dinamicamente as 30 imagens para não poluir o HTML
+  const totalImages = 30;
+  const basePath = "assets/images/slidefotos/";
+  for (let i = 1; i <= totalImages; i++) {
+    const img = document.createElement("img");
+    
+    // Debug: Avisa no console se a imagem não for encontrada
+    img.onerror = () => {
+      console.error(`🚨 Falha ao carregar a imagem: ${img.src}. Verifique se a pasta e o nome estão corretos.`);
+    };
+
+    img.src = `${basePath}${i}.webp`;
+    img.className = i === 1 ? "slide active" : "slide";
+    img.loading = "lazy";
+    slider.appendChild(img);
+  }
+
+  const slides = slider.querySelectorAll(".slide");
+  let currentIndex = 0;
+  let slideInterval;
+
+  const nextSlide = () => {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  };
+
+  // Só roda o slider quando ele aparecer na tela (preserva bateria e RAM)
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!slideInterval) slideInterval = setInterval(nextSlide, 3500); // Troca a cada 3.5s
+        } else {
+          clearInterval(slideInterval);
+          slideInterval = null;
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(slider);
+  } else {
+    slideInterval = setInterval(nextSlide, 3500);
+  }
+})();
