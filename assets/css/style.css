@@ -1083,6 +1083,8 @@ img {
   border-radius: var(--radius-md);
   padding: clamp(14px, 2.5vw, 20px);
   box-shadow: var(--shadow-hard);
+  display: flex;
+  flex-direction: column;
 }
 
 .access-card h3 {
@@ -1095,6 +1097,22 @@ img {
   margin: 0;
   color: var(--text);
   line-height: 1.45;
+}
+
+.access-icon {
+  width: 50%;
+  height: auto;
+  margin: auto auto 0 auto; /* Empurra pro fundo e centraliza na horizontal */
+  padding-top: 20px;
+  opacity: 0.85; /* Deixa a imagem levemente transparente para não roubar destaque */
+}
+
+.access-icon {
+  width: 50%;
+  height: auto;
+  margin: auto auto 0 auto; /* Empurra pro fundo e centraliza na horizontal */
+  padding-top: 20px;
+  opacity: 0.85; /* Deixa a imagem levemente transparente para não roubar destaque */
 }
 
 /* =========================================================
