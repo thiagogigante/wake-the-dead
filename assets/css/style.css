@@ -160,6 +160,7 @@ img {
   gap: clamp(6px, 1.5vw, 14px);
   font-weight: 600;
   font-family: var(--ui-font);
+  min-width: 0;
 }
 
 .logo-mini {
@@ -172,6 +173,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .header-text {
@@ -197,6 +199,50 @@ img {
   letter-spacing: 1px;
 }
 
+.hidden-countdown {
+  display: none;
+}
+
+.festival-status {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: min(56vw, 680px);
+  flex: 1 1 auto;
+  min-height: 42px;
+  padding: 8px 14px 8px 36px;
+  border-color: color-mix(in srgb, var(--violet-800), transparent 25%);
+  background:
+    /* linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)), */
+    linear-gradient(80deg, var(--violet-800), var(--violet-500));
+  box-shadow: 0 8px 20px rgba(22, 0, 26, 0.18);
+  color: #fff;
+  font-family: var(--ui-font);
+  font-size: clamp(0.72rem, 1.45vw, 1rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-wrap: balance;
+  animation: festival-status-pulse 1.8s ease-in-out infinite;
+}
+
+.festival-status::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #25ff7a;
+  box-shadow: 0 0 0 0 rgba(37, 255, 122, 0.55);
+  animation: festival-status-live 1.3s ease-out infinite;
+}
+
+.festival-status:empty {
+  display: none;
+}
+
 .countdown-unit {
   display: grid;
   gap: 2px;
@@ -216,6 +262,29 @@ img {
   color: transparent;
   font-weight: 800;
 
+}
+
+@keyframes festival-status-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(22, 0, 26, 0.18);
+  }
+
+  50% {
+    transform: scale(1.025);
+    box-shadow: 0 10px 26px rgba(22, 0, 26, 0.28);
+  }
+}
+
+@keyframes festival-status-live {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 255, 122, 0.55);
+  }
+
+  100% {
+    box-shadow: 0 0 0 9px rgba(37, 255, 122, 0);
+  }
 }
 
 /* Hamburger */
@@ -1793,11 +1862,29 @@ body:has(.side-menu.open) .scroll-indicator {
   }
 
   .header-text {
-    white-space: normal;
+    display: none;
   }
 
   .header-countdown {
     gap: 10px;
+  }
+
+  .header-right {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  .festival-status {
+    max-width: calc(100vw - 116px);
+    min-height: 38px;
+    padding: 7px 10px 7px 28px;
+    font-size: clamp(0.62rem, 2.6vw, 0.78rem);
+  }
+
+  .festival-status::before {
+    left: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   .countdown-unit span {

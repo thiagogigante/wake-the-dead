@@ -105,6 +105,37 @@ function sanitizeText(str) {
 })();
 
 /* =========================================================
+   Festival status
+========================================================= */
+(function initFestivalStatus() {
+  const el = document.getElementById('festivalStatus');
+  if (!el) return;
+
+  const festivalMessages = {
+    '2026-05-14': '⚡ O DESPERTAR JÁ COMEÇOU!',
+    '2026-05-15': "🎸 DESPERTAMOOOS! FIM DE SEMANA DE MUITO ROCK'N ROLL!",
+    '2026-05-16': '🎶 MAIS QUE MÚSICA, MOVIMENTO! WTD CONECTA GERAÇÕES!',
+    '2026-05-17': '💥 É SUA ÚLTIMA CHANCE, VEM DETONAR COM A GENTE!',
+  };
+
+  function getSaoPauloDateKey(date) {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Sao_Paulo',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).formatToParts(date);
+
+    const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+    return `${values.year}-${values.month}-${values.day}`;
+  }
+
+  const todayKey = getSaoPauloDateKey(new Date());
+  el.textContent = festivalMessages[todayKey]
+    || (todayKey < '2026-05-14' ? festivalMessages['2026-05-14'] : '🖤 FOI INCRÍVEL! ATÉ A PRÓXIMA!');
+})();
+
+/* =========================================================
    Countdown
 ========================================================= */
 (function initCountdown() {
