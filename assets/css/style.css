@@ -173,11 +173,13 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: flex-end;
   min-width: 0;
 }
 
 .header-text {
   font-size: clamp(0.85rem, 2.5vw, 2rem);
+  font-size: clamp(0.65rem, 2.5vw, 1.1rem);
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -187,6 +189,7 @@ img {
   color: transparent;
   filter: drop-shadow(0px 1.5px 0 #1200149a);
   transform: translateZ(0);
+  white-space: nowrap;
 }
 
 /* Contagem regressiva */
@@ -2118,10 +2121,6 @@ body:has(.side-menu.open) .scroll-indicator {
   }
 
   .header-dates:last-of-type {
-    display: none;
-  }
-
-  .header-text {
     display: none;
   }
 
