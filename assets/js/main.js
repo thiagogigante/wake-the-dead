@@ -461,6 +461,24 @@ function sanitizeText(str) {
 })();
 
 /* =========================================================
+   Toggle Nós na Mídia
+========================================================= */
+(function initMidiaToggle() {
+  const btn = document.getElementById('btn-toggle-midia');
+  const grid = document.getElementById('midia-grid');
+  
+  if (!btn || !grid) return;
+
+  let isExpanded = false;
+
+  btn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    grid.classList.toggle('expanded', isExpanded);
+    btn.textContent = isExpanded ? 'OCULTAR MATÉRIAS' : 'VER TODAS AS MATÉRIAS';
+  });
+})();
+
+/* =========================================================
    Botão Voltar ao Topo + Scroll Indicator
 ========================================================= */
 (function initScrollUtils() {
@@ -534,4 +552,45 @@ function sanitizeText(str) {
   } else {
     slideInterval = setInterval(nextSlide, 3500);
   }
+})();
+
+/* =========================================================
+   Modal "Em Breve"
+========================================================= */
+(function initEmBreveModal() {
+  const modal = document.getElementById('em-breve-modal');
+  const closeBtn = document.getElementById('em-breve-close');
+  
+  // Seleciona os botões que devem abrir o modal
+  const triggerButtons = document.querySelectorAll('a.panel-button[href="#aftermovie"], a.panel-button[href="#galeria"]');
+
+  if (!modal || !closeBtn || triggerButtons.length === 0) {
+    return;
+  }
+
+  function showModal(e) {
+    e.preventDefault(); // Impede a navegação para a âncora
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    closeBtn.focus(); // Foco no botão de fechar por acessibilidade
+  }
+
+  function hideModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    // Opcional: devolver o foco para o botão que abriu o modal
+  }
+
+  triggerButtons.forEach(btn => {
+    btn.addEventListener('click', showModal);
+  });
+
+  closeBtn.addEventListener('click', hideModal);
+  
+  // Fecha o modal ao clicar no fundo
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      hideModal();
+    }
+  });
 })();

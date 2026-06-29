@@ -983,6 +983,140 @@ img {
 }
 
 /* =========================================================
+   Nós na Mídia
+========================================================= */
+.midia-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .midia-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .midia-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.midia-card {
+  background: var(--violet-800);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-hard);
+  border: 1px solid var(--violet-700);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.midia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border-color: var(--violet-500);
+}
+
+.midia-media {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--violet-950);
+}
+
+.midia-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.midia-card:hover .midia-media img {
+  transform: scale(1.05);
+}
+
+.midia-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.midia-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.midia-source {
+  color: var(--gold-400);
+  font-weight: 700;
+}
+
+.midia-date {
+  color: var(--text-muted);
+}
+
+.midia-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.midia-content p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.midia-content .inline-link {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hidden-midia {
+  display: none;
+}
+
+.midia-grid.expanded .hidden-midia {
+  display: flex;
+}
+
+.midia-action {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.midia-action .panel-button {
+  display: inline-block;
+  width: auto;
+  min-width: 220px;
+  padding: 12px 24px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--violet-700), var(--violet-800));
+  border: 1px solid var(--violet-500);
+  font-family: var(--ui-font);
+}
+
+.midia-action .panel-button:hover,
+.midia-action .panel-button:focus-visible {
+  background: linear-gradient(45deg, var(--gold-500), var(--gold-400));
+  color: var(--violet-900);
+  border-color: var(--gold-400);
+}
+
+/* =========================================================
    Campanha
 ========================================================= */
 .campanha-banner {
@@ -1298,6 +1432,68 @@ img {
 .history-text p {
   margin: 0 0 10px;
   line-height: 1.55;
+}
+
+.history-text--extra {
+  margin-top: 32px;
+}
+
+.history-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .history-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.history-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.history-figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.history-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.history-source {
+  color: var(--gold-400);
+  font-weight: 700;
+}
+
+.history-date {
+  color: var(--text-muted);
+}
+
+.history-figcaption p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.4;
 }
 
 /* =========================================================
@@ -1852,6 +2048,70 @@ body:has(.side-menu.open) .scroll-indicator {
   }
 }
 
+/* =========================================================
+   Modal "Em Breve"
+========================================================= */
+.em-breve-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+}
+
+.em-breve-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.em-breve-modal-content {
+  background: linear-gradient(160deg, var(--violet-800), var(--violet-900));
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-hard);
+  border: 1px solid var(--violet-700);
+  transform: scale(0.9);
+  transition: transform 250ms ease-in-out;
+}
+
+.em-breve-modal.show .em-breve-modal-content {
+  transform: scale(1);
+}
+
+.em-breve-modal-content h2 {
+  color: var(--gold-400);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.em-breve-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.em-breve-close-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
 @media (max-width: 480px) {
   .header-dates:first-of-type {
     display: none;
@@ -1895,4 +2155,3 @@ body:has(.side-menu.open) .scroll-indicator {
     font-size: 0.5rem;
   }
 }
-

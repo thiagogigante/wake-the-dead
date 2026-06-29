@@ -65,17 +65,13 @@
        HEADER
   ============================== -->
   <header class="site-header" id="topo">
-     <div class="header-left">
-       <!-- width/height explícitos evitam layout shift (CLS) -->
+    <div class="header-left">
+      <!-- width/height explícitos evitam layout shift (CLS) -->
       <img class="logo-mini" src="assets/images/logo.png" alt="Wake the Dead Festival" width="42" height="42" />
-      <strong class="header-text">Wake the Dead Festival</strong>
-    </div>
-      
-      <!-- 
-    <span class="header-dates" aria-hidden="true">Dias</span>
+      <span class="header-dates" aria-hidden="true">Dias</span>
       <strong class="header-text">14, 15,<wbr>16 e 17</strong>
       <span class="header-dates" aria-hidden="true">de Maio<br />de 2026</span>
-    
+    </div>
     <div class="header-right">
       <div class="header-countdown hidden-countdown" aria-live="polite" aria-label="Contagem regressiva para o festival">
         <div class="countdown-unit"><span id="countdown-months">00</span><small>MESES</small></div>
@@ -84,12 +80,10 @@
         <div class="countdown-unit"><span id="countdown-minutes">00</span><small>MINS</small></div>
         <div class="countdown-unit"><span id="countdown-seconds">00</span><small>SEGS</small></div>
       </div>
-      -->
-      <div class="header-right">
-      <span class="header-dates" aria-hidden="true">Menu</span>
+      <div class="festival-status" id="festivalStatus" aria-live="polite"></div>
       <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="side-menu" type="button">
         <span></span><span></span><span></span>
-      </button></div>
+      </button>
     </div>
   </header>
 
@@ -101,20 +95,18 @@
       <button class="menu-close" aria-label="Fechar menu" type="button">FECHAR ×</button>
       <div class="menu-divider" role="separator"></div>
       <nav class="menu-links" aria-label="Navegação principal">
-        <!-- <a href="#lineup">LINE-UP</a> -->
-        <a href="#galeria">COBERTURA OFICIAL 15º ED. </a>
+        <a href="#lineup">LINE-UP</a>
         <a href="#sobre">NOSSO PROPÓSITO</a>
         <a href="#cartilha">EDUCAÇÃO AMBIENTAL</a>
         <a href="#impacto">IMPACTO</a>
-        <a href="#namidia">NA MÍDIA</a>
-        <!-- <a href="#campanha">CAMPANHA SOLIDÁRIA</a> -->
-        <!-- <a href="#wake-tour">WAKE UP TOUR</a> -->
+        <a href="#campanha">CAMPANHA SOLIDÁRIA</a>
+        <a href="#wake-tour">WAKE UP TOUR</a>
         <a href="#acessibilidade">ACESSIBILIDADE</a>
-        <!-- <a href="#comochegar">COMO CHEGAR</a> -->
-        <!-- <a href="#voluntario">SEJA VOLUNTÁRIO</a> -->
+        <a href="#comochegar">COMO CHEGAR</a>
+        <a href="#voluntario">SEJA VOLUNTÁRIO</a>
         <a href="#historia">NOSSA HISTÓRIA</a>
         <a href="#realizacao">REALIZAÇÃO</a>
-        <a href="#apoio">APOIO CULTURAL</a>
+        <a href="#apoio">APOIO</a>
         <a href="#contato">CONTATO</a>
       </nav>
       <div class="menu-divider" role="separator"></div>
@@ -156,7 +148,7 @@
       ></div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content">
-        <!-- <p class="hero-edition">15ª EDIÇÃO</p> -->
+        <p class="hero-edition">15ª EDIÇÃO</p>
         <img
           class="hero-logo"
           src="assets/images/logo.png"
@@ -166,13 +158,13 @@
           fetchpriority="high"
         />
         <p class="hero-tagline">ONDE A MÚSICA DESPERTA O MUNDO</p>
-        <!-- <p class="hero-free">EVENTO GRATUITO</p> -->
+        <p class="hero-free">EVENTO GRATUITO</p>
         <div class="hero-panel">
           <nav class="panel-grid" aria-label="Atalhos da página">
-            <a href="#galeria" class="panel-button">COBERTURA OFICIAL DA 15º EDIÇÃO</a>
-            <a href="#aftermovie" class="panel-button">ASSISTIR AO AFTERMOVIE</a>
-            <!-- <a href="#quemsomos" class="panel-button">QUEM SOMOS</a>
-            <a href="#voluntario" class="panel-button">SEJA VOLUNTÁRIO</a> -->
+            <a href="#lineup" class="panel-button">LINE-UP</a>
+            <a href="#wake-tour" class="panel-button">WAKE UP TOUR</a>
+            <a href="#comochegar" class="panel-button">COMO CHEGAR</a>
+            <a href="#voluntario" class="panel-button">SEJA VOLUNTÁRIO</a>
           </nav>
         </div>
       </div>
@@ -181,7 +173,7 @@
     <!-- ==============================
          LINE-UP
     ============================== -->
-    <!-- <section class="section theme-main" id="lineup" aria-labelledby="lineup-title">
+    <section class="section theme-main" id="lineup" aria-labelledby="lineup-title">
       <div class="section-header">
         <h2 id="lineup-title">Line-up</h2>
         <p>Veja a programação completa dos artistas que subirão no palco do Wake the Dead Festival!</p>
@@ -291,7 +283,7 @@
           </div>
         </div>
       </article>
-    </section> -->
+    </section>
 
     <!-- ==============================
          SOBRE / PROPÓSITO
@@ -407,182 +399,34 @@
           <strong>+ de 1.000 kg</strong>
           <span>Em alimentos entregues a instituições sociais da região</span>
         </article>
-         <article class="impact-card">
-            <strong>+ de 500 artistas</strong>
-            <span>Entre músicos de bandas, DJs e atrações formativas que já passaram pelo festival</span>
-            </article> 
         <article class="impact-card">
           <strong>Em 15 Edições + 2 Especiais</strong>
           <span>Consolidando o festival na Baixada Fluminense</span>
         </article>
-
-           
-
       </div>
-      
-    </section>
-
-    <!-- ==============================
-          NA MÍDIA
-    ============================== -->
-    <section class="section" id="namidia" aria-labelledby="midia-title">
-      <div class="section-header">
-        <h2 id="midia-title">Na Mídia</h2>
-        <p>Confira algumas das matérias e reportagens que já saíram sobre o festival.</p>
-      </div>
-      
-      <div class="midia-grid" id="midia-grid">
-        <!-- Matérias Visíveis (3) -->
-        <article class="midia-card">
-          <div class="midia-media">
-            <img src="assets/images/namidia/rjtv.png" al="RJTV" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">RJTV - Rede Globo [Televisão]</span>
-              <span class="midia-date">16 Mai 2026</span>
-            </div>
-            <h3>RJTV divulga fim de semana de Rock com Wake the Dead Festival</h3>
-            <p>Os apresentadores do RJTV anunciam o Wake the Dead Festival em Magé.</p>
-            <a href="https://www.youtube.com/watch?v=zdo0fewN6gM" target="_blank" rel="noopener noreferrer" class="inline-link">Assista ao trecho do programa</a>
-          </div>
-        </article>
-
-        <article class="midia-card">
-          <div class="midia-media">
-            <img src="assets/images/namidia/odia.jpg" alt="Matéria no jornal O Dia" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">O Dia [PORTAL]</span>
-              <span class="midia-date">06 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead Festival cresce e leva Detonautas para Magé</h3>
-            <p>Portal divulta o crescimento do evento e sua influência na comunidade.</p>
-            <a href="https://odia.ig.com.br/mage/2026/05/7246801-wake-the-dead-festival-cresce-e-leva-detonautas-para-mage.html" target="_blank" rel="noopener noreferrer" class="inline-link">Ler matéria completa</a>
-          </div>
-        </article>
-
-        <article class="midia-card">
-          <div class="midia-media">
-            <img src="assets/images/namidia/jornalextra.jpg" alt="Matéria no Jornal Extra" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">JORNAL EXTRA [IMPRESSO]</span>
-              <span class="midia-date">11 Mai 2016</span>
-            </div>
-            <h3>Aumenta que isso ai é rock'n roll, Magé!</h3>
-            <p>A matéria do Jornal Extra destaca evento que vai reunir bandas autorais e tributos a grandes nomes da música mundial.</p>
-            <a href="https://extra.globo.com/rio/noticia/2026/05/festival-de-rock-agita-mage-no-proximo-fim-de-semana.ghtml" target="_blank" rel="noopener noreferrer" class="inline-link">Também disponível no digital</a>
-          </div>
-        </article>
-
-        <!-- Matérias Ocultas (3) -->
-        <article class="midia-card hidden-midia">
-          <div class="midia-media">
-            <img src="assets/images/namidia/diariodorio.jpg" alt="Matéria na Revista Cifras" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">Diário do Rio [PORTAL]</span>
-              <span class="midia-date">8 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead chega à 15ª edição em Magé com show do Detonautas</h3>
-            <p>Portal Diario do Rio divulga evento gratuito de rock em Magé.</p>
-            <a href="https://diariodorio.com/wake-the-dead-festival-chega-a-15a-edicao-em-mage-com-show-do-detonautas/" target="_blank" rel="noopener noreferrer" class="inline-link">Ler matéria completa</a>
-          </div>
-        </article>
-
-        <article class="midia-card hidden-midia">
-          <div class="midia-media">
-            <img src="assets/images/namidia/bafafa.jpg" alt="Matéria na Rádio Cidade" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">AGENDA BAFAFÁ [PORTAL]</span>
-              <span class="midia-date">11 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead Festival chega à 15ª edição em Magé</h3>
-            <p>Portal AGENDA BAFAFÁ destaca o evento que vai reunir bandas autorais e tributos a grandes nomes da música mundial.</p>
-            <a href="https://bafafa.com.br/arte-e-cultura/musica/wake-the-dead-festival-chega-a-15-edicao-em-mage" target="_blank" rel="noopener noreferrer" class="inline-link">Ler matéria completa</a>
-          </div>
-        </article>
-
-        <article class="midia-card hidden-midia">
-          <div class="midia-media">
-            <img src="assets/images/namidia/temporeal.jpg" alt="Matéria em O Globo" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">Tempo Real [PORTAL]</span>
-              <span class="midia-date">11 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead expande fronteiras e anuncia nova edição</h3>
-            <p>O festival que já é tradição na Baixada leva seu palco e sua energia para novos públicos da região com lineup inédito.</p>
-            <a href="https://temporealrj.com/wake-the-dead-festival-mage-show-rock/" target="_blank" rel="noopener noreferrer" class="inline-link">Ler matéria completa</a>
-          </div>
-        </article>
-
-        <article class="midia-card hidden-midia">
-          <div class="midia-media">
-            <img src="assets/images/namidia/correiodabaixada.jpg" alt="Matéria em O Globo" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">CORREIO DA BAIXADA [IMPRESSO]</span>
-              <span class="midia-date">11 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead expande fronteiras e anuncia nova edição</h3>
-            <p>Jornal impresso do grupo Correio da Baixada destaca o Wake the Dead Festival em Magé.</p>
-            <a href="https://www.correiodabaixada.com.br/baixada/2026/05/284200-detonautas-e-bruno-sutter-no-lineup.html" target="_blank" rel="noopener noreferrer" class="inline-link">Também disponível no digital</a>
-          </div>
-        </article>
-
-          <article class="midia-card hidden-midia">
-          <div class="midia-media">
-            <img src="assets/images/namidia/correiodamanha.jpg" alt="Matéria em O Globo" loading="lazy" />
-          </div>
-          <div class="midia-content">
-            <div class="midia-meta">
-              <span class="midia-source">Correio da Manhã</span>
-              <span class="midia-date">11 Mai 2026</span>
-            </div>
-            <h3>Wake the Dead festival agita Magé com a cultura do rock</h3>
-            <p>O grupo Correio da Manhã compartilha a notícia sobre Wake the Dead Festival em seu portal.</p>
-            <a href="https://www.correiodamanha.com.br/baixada/2026/05/284200-detonautas-e-bruno-sutter-no-lineup.html" target="_blank" rel="noopener noreferrer" class="inline-link">Ler matéria completa</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="midia-action">
-        <button type="button" id="btn-toggle-midia" class="panel-button">VER TODAS AS MATÉRIAS</button>
-      </div>
-      
     </section>
 
     <!-- ==============================
          CAMPANHA SOLIDÁRIA
     ============================== -->
-    <!-- <section class="section" id="campanha" aria-labelledby="campanha-title">
+    <section class="section" id="campanha" aria-labelledby="campanha-title">
       <div class="campanha-banner">
         
-        !-- 
+        <!-- 
         <p class="campanha-eyebrow">Campanha Solidária</p>
         <h2 id="campanha-title">TRAGA 1 KG DE ALIMENTO E CONCORRA A SORTEIOS</h2>
         <p>Sua contribuição fortalece ações sociais no território, amplia o alcance comunitário do Wake the Dead e de quebra desenrola uns brindes maneiríssimos.</p>
-        --
+        -->
       
     <img src="assets/images/banner.png" alt="Campanha Solidária e Feira de Economia Criativa" loading="lazy" />
     
     </div> 
-    </section> -->
+    </section>
 
     <!-- ==============================
          WAKE UP TOUR
     ============================== -->
-    <!-- <section class="section tour" id="wake-tour" aria-labelledby="tour-title">
+    <section class="section tour" id="wake-tour" aria-labelledby="tour-title">
       <div class="section-header">
         <h2 id="tour-title">WAKE UP TOUR</h2>
         <p>Mais que um passeio, uma experiência.</p>
@@ -596,7 +440,7 @@
           <h3>Uma experiência além do palco</h3>
           <p>O Wake Up Tour é uma vivência cultural, educativa e formativa que integra o Wake the Dead Festival. Durante o percurso, você se conecta com territórios, histórias e comunidades locais de Magé através de escuta, troca e aprendizado.</p>
           
-              !--        BENEFICIOS     --
+              <!--        BENEFICIOS     -->
           <div class="tour-beneficios-grid">
             <div class="logo-card" aria-label="Transporte e Alimentação">🚌+🍽️ <p>Transporte + Alimentação</p></div>
             <div class="logo-card" aria-label="Visitação Guiada">🗺️ <p>Visitação Guiada</p></div>
@@ -618,7 +462,7 @@
         </div>
       </article>
 
-    !-- Carrossel de pontos turísticos --
+    <!-- Carrossel de pontos turísticos -->
 
       <div class="sobre-text"><h3>Percurso</h3></div>
                
@@ -655,7 +499,7 @@
           <a target="_blank" href="https://l.instagram.com/?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSc7Oen94FpjGvI8AY2NdHyLTGlyxVX0c9HEj78lIz6Q9A-EPQ%2Fviewform%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnG9zNP7ijpULfCyPTW2cAYG0dllm7bnLf6TNnoRXn_RCrnNJB88RX9nAZW58_aem_1lgJU-IXRpyVa6IqAKzR5g&e=AT54GjKkGoY7NTSFXumLW1jnrBdpmFlzNCOSXjAklnvUOzHVYrKXHnWQlokctYg4zWBxY7Ckd_wVY_NSWpCIQtW9P6cBaKXzaf5lXQ1emA" class="panel-button">QUERO PARTICIPAR</a>
         </div>
       
-    </section> -->
+    </section>
 
     <!-- ==============================
          ACESSIBILIDADE
@@ -687,7 +531,7 @@
     <!-- ==============================
          LOCALIZAÇÃO
     ============================== -->
-    <!-- <section class="section" id="comochegar" aria-labelledby="loc-title">
+    <section class="section" id="comochegar" aria-labelledby="loc-title">
       <div class="section-header">
         <h2 id="loc-title">Como Chegar</h2>
         <p>Os ShowS acontecerão no espaço da Antiga Fábrica de Tecido, onde hoje funciona o estacionamento do Super Terê Frutas Supermercados.</p><br>
@@ -698,8 +542,10 @@
            pra você que vem de fora da cidade!</p>
       
           </div>
-
-      
+      <!--
+        Iframe do Maps carregado de forma lazy com IntersectionObserver.
+        O src real é movido para data-src para não bloquear o parser.
+      -->
       <div class="map-placeholder" id="map-placeholder" aria-label="Mapa de localização do festival">
         <iframe
           id="map-iframe"
@@ -714,12 +560,12 @@
           title="Mapa: Como Chegar no Wake the Dead Festival em Magé, RJ"
         ></iframe>
       </div>
-    </section> -->
+    </section>
 
     <!-- ==============================
          VOLUNTÁRIO
     ============================== -->
-    <!-- <section class="section voluntario" id="voluntario" aria-labelledby="vol-title">
+    <section class="section voluntario" id="voluntario" aria-labelledby="vol-title">
       <div class="section-header">
         <h2 id="vol-title">Seja Voluntário</h2>
       </div>
@@ -731,7 +577,7 @@
                 <a href="https://forms.gle/4xCx1Mytm3yadMKu8" target="_blank" class="panel-button voluntario-button" aria-label="Abrir formulário de inscrição de voluntariado">Inscreva-se como voluntário</a>
 
       </div>
-    </section> -->
+    </section>
 
     <!-- ==============================
          HISTÓRIA
@@ -739,7 +585,7 @@
     <section class="section history theme-bg-noise" id="historia" aria-labelledby="hist-title">
       <div class="section-header">
         <h2 id="hist-title">Nossa História</h2>
-        <p>15 edições construindo uma comunidade consciente e apaixonada por música.</p>
+        <p>15 edições construindo uma comunidade apaixonada por música pesada.</p>
       </div>
 
       <div class="history-stack">
@@ -752,6 +598,7 @@
             <h3>Allan Aguiar</h3>
             <p>Allan é o idealizador do Wake the Dead Festival e uma das forças por trás do movimento cultural que conecta música, território e transformação social na Baixada Fluminense. Sua trajetória nasce dentro da própria cena, ainda na época em que foi baterista da banda Nobre Causa, quando os primeiros eventos já carregavam um propósito que ia além do palco.</p>
             <p>Com mais de uma década de atuação, Allan consolidou o Wake the Dead como um dos principais pontos de encontro da cena underground regional. Ao longo de mais de 15 edições, o festival abriu espaço para artistas independentes, fortaleceu a música autoral e contribuiu para revelar bandas que posteriormente alcançaram grandes palcos no cenário nacional.</p>
+            <p>Em 2017, ele ganhou destaque ao propor ideias para o Rock in Rio, como um "Palco Garagem". <a class="inline-link" href="https://extra.globo.com/noticias/rio/organizador-de-festival-de-rock-na-baixada-quer-sugerir-roberto-medina-palco-garagem-22091564.html" target="_blank" rel="noopener noreferrer">Veja a Matéria do Jornal Extra.</a></p>
             <p>Além da produção cultural, Allan atua como gestor ambiental, integrando práticas sustentáveis ao festival e alinhando o projeto aos Objetivos de Desenvolvimento Sustentável (ODS). Sua atuação vai além da música: envolve inclusão social, acessibilidade, educação ambiental e fortalecimento da economia local.</p>
           </div>
         </article>
@@ -772,11 +619,8 @@
         </article>
 
         <article class="history-block history-block--full">
-          
           <div class="history-text">
-            <h3>Arquivo Wake the Dead</h3>
-            <br>
-
+            <h3>Time-Line</h3>
             <p>Confira a Linha do Tempo com os Flyers de todas as Edições do Wake the Dead.</p>
           </div>
           <div class="timeline-carousel" data-carousel aria-label="Carrossel de flyers das edições do festival">
@@ -805,50 +649,6 @@
             </div>
             <button class="carousel-btn next" type="button" aria-label="Próximo flyer">›</button>
           </div>
-
-          <div class="history-text history-text--extra">
-            <p> Ao longo dos anos, o festival recebeu atenção da imprensa local e regional, destacando sua importância para a cena musical.
-
-          </div>
-          <div class="history-gallery">
-            
-            <figure class="history-figure">
-              <img src="assets/images/arquivo/wtd-materia5.jpg" alt="Arquivo Wake the Dead — Jornal a Voz de Magé" loading="lazy" />
-              <figcaption class="history-figcaption">
-                <div class="history-meta">
-                  <span class="history-source">Jornal a Voz de Magé</span>
-                  <span class="history-date">2013</span>
-                </div>
-                <p>Imprensa local destacando a força da cena do rock independente em Magé.</p>
-              </figcaption>
-            </figure>
-            
-            <figure class="history-figure">
-              <img src="assets/images/arquivo/wtd-materia2.jpg" alt="Arquivo Wake the Dead — Matéria do Jornal Extra" loading="lazy" />
-              <figcaption class="history-figcaption">
-                <div class="history-meta">
-                  <span class="history-source">Jornal Extra</span>
-                  <span class="history-date">12 Set 2017</span>
-                </div>
-                <p><a class="inline-link" href="https://extra.globo.com/noticias/rio/organizador-de-festival-de-rock-na-baixada-quer-sugerir-roberto-medina-palco-garagem-22091564.html" target="_blank" rel="noopener noreferrer">Veja a Matéria Completa do Jornal Extra </a> de quando Allan sugeriu o "Palco Garagem" ao Rock in Rio.</p>
-              
-              </figcaption>
-            </figure>
-            
-            <figure class="history-figure">
-              <img src="assets/images/arquivo/extravip.jpg" alt="Arquivo Wake the Dead — RJ TV - Rede Globo" loading="lazy" />
-              <figcaption class="history-figcaption">
-                <div class="history-meta">
-                  <span class="history-source">Portal ExtraVIP</span>
-                  <span class="history-date">16 Mai 2025</span>
-                </div>
-                <p><a class="inline-link" href="http://extravip.net/wake-the-dead-festival-aterrissa-na-praca-das-andorinhas-em-mage-neste-final-de-semana/" target="_blank" rel="noopener noreferrer">Confira a Matéria do Portal ExtraVIP </a> sobre a Edição Especial do Wake the Dead Festival em Andorinhas.</p>
-
-              </figcaption>
-            </figure>
-            
-          </div>
-
         </article>
       </div>
     </section>
@@ -859,7 +659,7 @@
     <section class="section theme-tone-main" id="realizacao" aria-labelledby="real-title">
       <div class="section-header">
         <h2 id="real-title">Realização</h2>
-        <p>A 15º Edição do Wake the Dead Festival foi realizada com o apoio de diversas instituições e produtores.</p>
+        <p>Instituições e produtores responsáveis.</p>
       </div>
       <div class="logo-grid logo-grid--plain">
         <div class="logo-placeholder"><img src="assets/images/realizacao/01-aldir.png" alt="Política Nacional Aldir Blanc de Fomento à Cultura" loading="lazy" /></div>
@@ -881,8 +681,8 @@
     ============================== -->
     <section class="section theme-tone-main" id="apoio" aria-labelledby="apoio-title">
       <div class="section-header">
-        <h2 id="apoio-title">Apoio Cultural</h2>
-        <p>Empresas, marcas e instituições que apoiaram a 15º Edição do Wake the Dead Festival.</p>
+        <h2 id="apoio-title">Apoio</h2>
+        <p>Espaço reservado para marcas e apoiadores.</p>
       </div>
       <div class="logo-grid logo-grid--plain">
 
@@ -1041,16 +841,6 @@
       loading="lazy"
     />
   </main>
-
-  <!-- Modal "Em Breve" -->
-  <div id="em-breve-modal" class="em-breve-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="em-breve-title">
-    <div class="em-breve-modal-content">
-      <button id="em-breve-close" class="em-breve-close-btn" aria-label="Fechar">&times;</button>
-      <h2 id="em-breve-title">EM BREVE</h2>
-      <p>Estamos organizando tudo por aqui, estará disponível em breve.</p>
-    </div>
-  </main>
-  </div>
 
   <footer class="site-footer">
     <p>© 2011–2026 Wake the Dead Festival. Todos os direitos reservados.</p>
